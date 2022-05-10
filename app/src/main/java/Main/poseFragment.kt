@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.vision_exam.MainActivity
 import com.example.vision_exam.R
-import com.example.vision_exam.java.ChooserActivity
 
 
 class poseFragment : Fragment() {
