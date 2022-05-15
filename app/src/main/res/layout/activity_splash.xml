@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="Main.splashActivity"
+    android:background="@drawable/splash_gradient_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif"
+        android:text="GROW"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:srcCompat = "@drawable/dumbbell"/>
+
+    <ProgressBar
+        android:id="@+id/splash_progressBar"
+        android:layout_marginTop="150dp"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:indeterminateDrawable="@drawable/splash_progressbar"/>
+
+
+
+
+
+
+</LinearLayout>
