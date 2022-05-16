@@ -32,7 +32,7 @@ class MainActivity :
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
         setContentView(R.layout.activity_chooser)
-
+        //tt
 
         // Set up ListView and Adapter
         val listView = findViewById<ListView>(R.id.test_activity_list_view)
