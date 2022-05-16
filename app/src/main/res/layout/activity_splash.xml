@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="Main.splashActivity"
+    tools:context="Main.signup.splashActivity"
     android:background="@drawable/splash_gradient_background">
 
     <TextView

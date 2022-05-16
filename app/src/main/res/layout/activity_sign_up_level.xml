@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/white"
-    tools:context="Main.SignUpLevelActivity">
+    tools:context="Main.signup.SignUpLevelActivity">
 
     <TextView
         android:id="@+id/signup_level_title"

@@ -1,9 +1,8 @@
-package Main
+package Main.signup
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.vision_exam.MainActivity
 import com.example.vision_exam.R
 import kotlinx.coroutines.*
 
@@ -16,7 +15,7 @@ class splashActivity : AppCompatActivity() {
         activityScope.launch {
             delay(2000)
 
-            val intent = Intent(this@splashActivity,SignUpProfileActivity::class.java)
+            val intent = Intent(this@splashActivity, SignUpProfileActivity::class.java)
             startActivity(intent)
             finish()
         }

@@ -1,4 +1,4 @@
-package Main
+package Main.signup
 
 import android.content.Intent
 import android.graphics.Color
@@ -34,7 +34,7 @@ class SignUpBodyPartActivity : AppCompatActivity() {
 
         val C_button = findViewById<Button>(R.id.signup_bodyPart_continueButton)
         C_button.setOnClickListener {
-            val intent = Intent(this,SignUpLevelActivity::class.java)
+            val intent = Intent(this, SignUpLevelActivity::class.java)
             startActivity(intent)
         }
     }

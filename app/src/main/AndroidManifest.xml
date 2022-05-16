@@ -27,10 +27,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
         <activity
-            android:name="Main.SignUpLevelActivity"
+            android:name="Main.signup.SignUpLevelActivity"
             android:exported="false" />
         <activity
-            android:name="Main.SignUpBodyPartActivity"
+            android:name="Main.signup.SignUpBodyPartActivity"
             android:exported="false" />
 
         <meta-data
@@ -41,7 +41,7 @@
             android:value="barcode,face,ocr,ica,custom_ica" />
 
         <activity
-            android:name="Main.splashActivity"
+            android:name="Main.signup.splashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +50,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="Main.SignUpProfileActivity"
+            android:name="Main.signup.SignUpProfileActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

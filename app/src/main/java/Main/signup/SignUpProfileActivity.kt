@@ -1,4 +1,4 @@
-package Main
+package Main.signup
 
 import android.content.Intent
 import android.graphics.Color
@@ -8,7 +8,6 @@ import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import com.example.vision_exam.R
 
@@ -33,7 +32,7 @@ class SignUpProfileActivity : AppCompatActivity() {
 
         val C_button = findViewById<Button>(R.id.signup_profile_continueButton)
         C_button.setOnClickListener {
-            val intent = Intent(this,SignUpBodyPartActivity::class.java)
+            val intent = Intent(this, SignUpBodyPartActivity::class.java)
             startActivity(intent)
           }
         }

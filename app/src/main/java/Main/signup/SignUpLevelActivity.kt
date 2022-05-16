@@ -1,4 +1,4 @@
-package Main
+package Main.signup
 
 import android.content.Intent
 import android.graphics.Color
@@ -9,7 +9,6 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.widget.Button
 import android.widget.TextView
-import com.example.vision_exam.MainActivity
 import com.example.vision_exam.R
 import com.example.vision_exam.StartActivity
 
