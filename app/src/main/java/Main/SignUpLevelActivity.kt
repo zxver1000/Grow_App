@@ -11,6 +11,8 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.vision_exam.MainActivity
 import com.example.vision_exam.R
+import com.example.vision_exam.StartActivity
+
 /*
    사용자 회원가입 - 3. 운동 레벨 선택 화면
  */
@@ -49,7 +51,7 @@ class SignUpLevelActivity : AppCompatActivity() {
 
         val C_button = findViewById<Button>(R.id.signup_level_continueButton)
         C_button.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this,StartActivity::class.java)
             startActivity(intent)
         }
     }

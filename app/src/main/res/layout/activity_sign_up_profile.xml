@@ -9,6 +9,16 @@
     android:background="@color/white"
     tools:context="Main.SignUpProfileActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/signup_profile_title"
         android:layout_width="match_parent"
@@ -112,5 +122,6 @@
             android:background="@drawable/rounded_button"
             android:backgroundTint="#6842FF"/>
     </LinearLayout>
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
