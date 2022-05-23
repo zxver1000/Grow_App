@@ -33,6 +33,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top"/>
 
+    <Button
+        android:id="@+id/stop_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
     <ToggleButton
         android:id="@+id/facing_switch"
         android:layout_width="48dp"

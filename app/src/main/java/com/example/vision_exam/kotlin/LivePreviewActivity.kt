@@ -15,7 +15,8 @@
  */
 
 package com.example.vision_exam.kotlin
-
+import Main.*
+import Main.resultPose.ResultActivity
 import android.Manifest
 import android.content.Context
 import android.content.Intent
@@ -25,14 +26,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import android.widget.AdapterView
+import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
-import android.widget.ArrayAdapter
-import android.widget.CompoundButton
-import android.widget.ImageView
-import android.widget.Spinner
-import android.widget.Toast
-import android.widget.ToggleButton
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.vision_exam.*
@@ -68,14 +63,14 @@ class LivePreviewActivity :
   private var preview: CameraSourcePreview? = null
   private var graphicOverlay: GraphicOverlay? = null
   private var selectedModel = POSE_DETECTION
-
+  private  lateinit var button:Button
+  private lateinit var  button2:Button
   override fun onCreate(savedInstanceState: Bundle?) {
 
 
     super.onCreate(savedInstanceState)
     Log.d(TAG, "onCreate")
     setContentView(R.layout.activity_vision_live_preview)
-
     preview = findViewById(R.id.preview_view)
     if (preview == null) {
       Log.d(TAG, "Preview is null")
@@ -104,8 +99,6 @@ class LivePreviewActivity :
     options.add(IMAGE_LABELING_CUSTOM)
     options.add(CUSTOM_AUTOML_LABELING)
 
-
-
     // Creating adapter for spinner
     val dataAdapter = ArrayAdapter(this, R.layout.spinner_style, options)
 
@@ -125,9 +118,17 @@ class LivePreviewActivity :
       startActivity(intent)
     }
 
+    val button = findViewById<Button>(R.id.stop_btn2)
+    button.setOnClickListener {
+      val intent = Intent(this, ResultActivity::class.java)
+      startActivity(intent)
+      finish()
+    }
 
 
     createCameraSource(selectedModel)
+
+
     if(PoseGraphic.count==10)
     {
 
@@ -136,7 +137,22 @@ class LivePreviewActivity :
       val intent = Intent(this, StartActivity::class.java)
       startActivity(intent)
 
+    }
 
+  }
+
+  fun btn_set(){
+    button=findViewById(R.id.stop_button)
+    button2=findViewById(R.id.stop_btn2)
+    button2?.setOnClickListener {
+      val intent = Intent(this, ResultActivity::class.java)
+      startActivity(intent)
+
+    }
+    button?.setOnClickListener {
+
+      val intent = Intent(this, ResultActivity::class.java)
+      startActivity(intent)
     }
   }
 
@@ -400,7 +416,7 @@ class LivePreviewActivity :
   }
 
   companion object {
-    private const val POSE_DETECTION = "Pose Detection"
+    private const val POSE_DETECTION = "KLAP"
     private const val OBJECT_DETECTION = "Object Detection"
     private const val OBJECT_DETECTION_CUSTOM = "Custom Object Detection"
     private const val CUSTOM_AUTOML_OBJECT_DETECTION = "Custom AutoML Object Detection (Flower)"
