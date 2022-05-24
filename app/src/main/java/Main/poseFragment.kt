@@ -31,11 +31,12 @@ class poseFragment : Fragment() {
             print("!11")
             val intent = Intent(activity, MainActivity::class.java)
             startActivity(intent)
+            print("1212")
         }
         recylcerView=root.findViewById(R.id.recylcerView)
    init()
         return root
-
+//dfddfdfd
 
     }
 
