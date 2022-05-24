@@ -49,6 +49,7 @@ android {
     }
 
 
+
 }
 
 
@@ -138,9 +139,15 @@ dependencies {
     implementation "androidx.camera:camera-camera2:1.0.0-SNAPSHOT"
     implementation "androidx.camera:camera-lifecycle:1.0.0-SNAPSHOT"
     implementation "androidx.camera:camera-view:1.0.0-SNAPSHOT"
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
 
     // On Device Machine Learnings
     implementation "com.google.android.odml:image:1.0.0-beta1"
+
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
 configurations {
     // Resolves dependency conflict caused by some dependencies use

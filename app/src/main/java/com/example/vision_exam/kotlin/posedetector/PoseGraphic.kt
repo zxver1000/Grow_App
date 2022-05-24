@@ -45,7 +45,10 @@ class PoseGraphic internal constructor(
   private val whitePaint: Paint
   private val BlackPaint: Paint
   private val countpaint:Paint
-
+  private val acpaint:Paint
+  private val acpaint2:Paint
+  public var count=0
+  public var accuraccy=0.0
   init {
     classificationTextPaint = Paint()
     classificationTextPaint.color = Color.WHITE
@@ -67,9 +70,20 @@ class PoseGraphic internal constructor(
     BlackPaint.color=Color.BLACK
     BlackPaint.textSize=110f
     countpaint=Paint()
-    countpaint.color=Color.BLACK
+    countpaint.color=Color.WHITE
     countpaint.textSize=80f
+
+    acpaint=Paint()
+    acpaint.color=Color.WHITE
+    acpaint.textSize=60f
+
+    acpaint2=Paint()
+    acpaint2.color=Color.BLACK
+    acpaint2.textSize=60f
+
   }
+
+
 
   override fun draw(canvas: Canvas) {
     val landmarks = pose.allPoseLandmarks
@@ -91,13 +105,37 @@ class PoseGraphic internal constructor(
         canvas.drawText("count",10.0f,1790f,countpaint)
         canvas.drawRect(0f, 1800f, 200f, 2000f,rightPaint)
         canvas.drawText( poseClassification[i],67.0f,1930f,BlackPaint)
-      }
+        print(poseClassification[i])
+        if(poseClassification[i]!="") {
+          print("1111-------------------------")
+          print(poseClassification[i])
+          count = poseClassification[i].toInt()
+
+        }
+        }
       else{
-        canvas.drawText(
-          poseClassification[i],
-          classificationX,
-          classificationY,
-          classificationTextPaint)
+        canvas.drawText("Accuracy",830.0f,1780f,acpaint)
+        canvas.drawRect(850f, 1800f, 1200f, 2000f,rightPaint)
+
+        if(poseClassification[i]=="100%") {
+          acpaint.textSize=60f
+          canvas.drawText(poseClassification[i],890.0f,1900f,acpaint2)
+        }
+        else
+        {
+          acpaint.textSize=70f
+          canvas.drawText( poseClassification[i],890.0f,1900f,acpaint2)
+        }
+
+
+
+        print(poseClassification[i])
+        if(poseClassification[i]!="") {
+          print("22222222222222-------------------------")
+          print(poseClassification[i])
+          var s=poseClassification[i].split("%")
+          accuracy += s[0].toDouble()
+        }
       }
 
 
@@ -278,5 +316,8 @@ class PoseGraphic internal constructor(
     private val IN_FRAME_LIKELIHOOD_TEXT_SIZE = 30.0f
     private val STROKE_WIDTH = 10.0f
     private val POSE_CLASSIFICATION_TEXT_SIZE = 60.0f
+
+    public var accuracy=0.0
+    public var count=0
   }
 }

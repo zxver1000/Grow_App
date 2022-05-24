@@ -15,26 +15,24 @@
  */
 
 package com.example.vision_exam.kotlin
-
+import Main.*
+import Main.resultPose.ResultActivity
+import android.Manifest
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import android.widget.AdapterView
+import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
-import android.widget.ArrayAdapter
-import android.widget.CompoundButton
-import android.widget.ImageView
-import android.widget.Spinner
-import android.widget.Toast
-import android.widget.ToggleButton
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import com.example.vision_exam.*
 import com.google.android.gms.common.annotation.KeepName
 import com.google.mlkit.common.model.LocalModel
-import com.example.vision_exam.CameraSource
-import com.example.vision_exam.CameraSourcePreview
-import com.example.vision_exam.GraphicOverlay
-import com.example.vision_exam.R
 import com.example.vision_exam.kotlin.barcodescanner.BarcodeScannerProcessor
 import com.example.vision_exam.kotlin.facedetector.FaceDetectorProcessor
 import com.example.vision_exam.kotlin.labeldetector.LabelDetectorProcessor
@@ -54,6 +52,7 @@ import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import java.io.IOException
 import java.util.ArrayList
+import com.example.vision_exam.kotlin.posedetector.PoseGraphic
 
 /** Live preview demo for ML Kit APIs. */
 @KeepName
@@ -64,12 +63,14 @@ class LivePreviewActivity :
   private var preview: CameraSourcePreview? = null
   private var graphicOverlay: GraphicOverlay? = null
   private var selectedModel = POSE_DETECTION
-
+  private  lateinit var button:Button
+  private lateinit var  button2:Button
   override fun onCreate(savedInstanceState: Bundle?) {
+
+
     super.onCreate(savedInstanceState)
     Log.d(TAG, "onCreate")
     setContentView(R.layout.activity_vision_live_preview)
-
     preview = findViewById(R.id.preview_view)
     if (preview == null) {
       Log.d(TAG, "Preview is null")
@@ -98,8 +99,6 @@ class LivePreviewActivity :
     options.add(IMAGE_LABELING_CUSTOM)
     options.add(CUSTOM_AUTOML_LABELING)
 
-
-
     // Creating adapter for spinner
     val dataAdapter = ArrayAdapter(this, R.layout.spinner_style, options)
 
@@ -119,8 +118,89 @@ class LivePreviewActivity :
       startActivity(intent)
     }
 
+    val button = findViewById<Button>(R.id.stop_btn2)
+    button.setOnClickListener {
+      val intent = Intent(this, ResultActivity::class.java)
+      startActivity(intent)
+      finish()
+    }
+
+
     createCameraSource(selectedModel)
+
+
+    if(PoseGraphic.count==10)
+    {
+
+      print("tentnet")
+
+      val intent = Intent(this, StartActivity::class.java)
+      startActivity(intent)
+
+    }
+
   }
+
+  fun btn_set(){
+    button=findViewById(R.id.stop_button)
+    button2=findViewById(R.id.stop_btn2)
+    button2?.setOnClickListener {
+      val intent = Intent(this, ResultActivity::class.java)
+      startActivity(intent)
+
+    }
+    button?.setOnClickListener {
+
+      val intent = Intent(this, ResultActivity::class.java)
+      startActivity(intent)
+    }
+  }
+
+
+  private fun allRuntimePermissionsGranted(): Boolean {
+    for (permission in LivePreviewActivity.REQUIRED_RUNTIME_PERMISSIONS) {
+      permission?.let {
+        if (!isPermissionGranted(this, it)) {
+          return false
+        }
+      }
+    }
+    return true
+  }
+
+  private fun getRuntimePermissions() {
+    val permissionsToRequest = ArrayList<String>()
+    for (permission in LivePreviewActivity.REQUIRED_RUNTIME_PERMISSIONS) {
+      permission?.let {
+        if (!isPermissionGranted(this, it)) {
+          permissionsToRequest.add(permission)
+        }
+      }
+    }
+
+    if (permissionsToRequest.isNotEmpty()) {
+      ActivityCompat.requestPermissions(
+        this,
+        permissionsToRequest.toTypedArray(),
+        MainActivity.PERMISSION_REQUESTS
+      )
+    }
+  }
+
+  private fun isPermissionGranted(context: Context, permission: String): Boolean {
+    if (ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED
+    ) {
+      Log.i(LivePreviewActivity.TAG, "Permission granted: $permission")
+      return true
+    }
+    Log.i(LivePreviewActivity.TAG, "Permission NOT granted: $permission")
+    return false
+  }
+
+
+
+
+
 
   @Synchronized
   override fun onItemSelected(parent: AdapterView<*>?, view: View?, pos: Int, id: Long) {
@@ -336,7 +416,7 @@ class LivePreviewActivity :
   }
 
   companion object {
-    private const val POSE_DETECTION = "Pose Detection"
+    private const val POSE_DETECTION = "KLAP"
     private const val OBJECT_DETECTION = "Object Detection"
     private const val OBJECT_DETECTION_CUSTOM = "Custom Object Detection"
     private const val CUSTOM_AUTOML_OBJECT_DETECTION = "Custom AutoML Object Detection (Flower)"
@@ -354,5 +434,46 @@ class LivePreviewActivity :
     private const val SELFIE_SEGMENTATION = "Selfie Segmentation"
 
     private const val TAG = "LivePreviewActivity"
+
+    private val CLASSES =
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+        arrayOf<Class<*>>(
+          LivePreviewActivity::class.java,
+          StillImageActivity::class.java,
+        )
+      else
+        arrayOf<Class<*>>(
+          LivePreviewActivity::class.java,
+          StillImageActivity::class.java,
+          CameraXLivePreviewActivity::class.java,
+          CameraXSourceDemoActivity::class.java
+        )
+    private val DESCRIPTION_IDS =
+      if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+        intArrayOf(
+          R.string.desc_camera_source_activity,
+          R.string.desc_still_image_activity,
+        )
+      else
+        intArrayOf(
+          R.string.desc_camera_source_activity,
+          R.string.desc_still_image_activity,
+          R.string.desc_camerax_live_preview_activity,
+          R.string.desc_cameraxsource_demo_activity
+        )
+
+    public val PERMISSION_REQUESTS = 1
+
+    public val REQUIRED_RUNTIME_PERMISSIONS =
+      arrayOf(
+        Manifest.permission.CAMERA,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        Manifest.permission.READ_EXTERNAL_STORAGE
+      )
   }
+
+
+
+
 }
+
