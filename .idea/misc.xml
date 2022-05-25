@@ -3,7 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/custom_checkbox.xml" value="0.269" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/custom_levelbutton.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/custon_levelbutton.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/levelbutton_unclicked.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/logo_mlkit.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/rounded_button.xml" value="0.269" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/rounded_checkbox.xml" value="0.269" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/rounded_editrext.xml" value="0.269" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/rounded_edittext.xml" value="0.269" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/splash_gradient_background.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/splash_progressbar.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_sign_up_body_part.xml" value="0.33" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_sign_up_level.xml" value="0.5" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_sign_up_profile.xml" value="0.25" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_splash.xml" value="0.18489583333333334" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_start.xml" value="0.18489583333333334" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_vision_camerax_live_preview.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/drawable-hdpi/ic_switch_camera_white_48dp.xml" value="0.1" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/drawable-mdpi/ic_switch_camera_white_48dp.xml" value="0.1" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/drawable/list_item_background.xml" value="0.1" />
@@ -14,6 +33,7 @@
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_chooser.xml" value="0.25" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_main.xml" value="0.16614583333333333" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_main2.xml" value="0.22" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_result.xml" value="0.18177083333333333" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_settings.xml" value="0.16614583333333333" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_start.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_still_image.xml" value="0.16614583333333333" />
@@ -21,17 +41,24 @@
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_vision_cameraxsource_demo.xml" value="0.16614583333333333" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_vision_entry_choice.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/activity_vision_live_preview.xml" value="0.16614583333333333" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/cardview_item.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_badge.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_board.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_camera.xml" value="0.1537037037037037" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_compare.xml" value="0.15932117527862208" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_first.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_home.xml" value="0.1537037037037037" />
-        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_pose.xml" value="0.33" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_pose.xml" value="0.2" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_result1.xml" value="0.18177083333333333" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_youtube.xml" value="0.1537037037037037" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/listview_edittext.xml" value="0.16160081053698075" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/listview_item.xml" value="0.25" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/settings_style.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/spinner_style.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/toggle_style.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/menu/camera_button_menu.xml" value="0.16614583333333333" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/menu/navi_menu.xml" value="0.1537037037037037" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/menu/navi_menu_result.xml" value="0.18177083333333333" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/xml/preference_live_preview_quickstart.xml" value="0.22" />

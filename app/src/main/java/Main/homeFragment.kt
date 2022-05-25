@@ -1,5 +1,7 @@
 package Main
 
+import Main.home.SubActivity01
+import Main.home.SubActivity02
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -23,8 +25,12 @@ class homeFragment : Fragment() {
         val button_rec = root.findViewById<Button>(R.id.exercise_rec)
 
         //버튼부분 수정 필요
+        button_rec?.setOnClickListener{
+            val intent = Intent(activity, SubActivity01::class.java)
+            startActivity(intent)
+        }
         button_info?.setOnClickListener{
-            val intent = Intent(activity, MainActivity::class.java)
+            val intent = Intent(activity, SubActivity02::class.java)
             startActivity(intent)
         }
 

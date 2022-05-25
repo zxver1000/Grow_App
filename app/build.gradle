@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+
     compileSdk 31
 
     defaultConfig {
@@ -141,7 +142,7 @@ dependencies {
     implementation "androidx.camera:camera-view:1.0.0-SNAPSHOT"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-
+    implementation 'androidx.core:core-ktx:1.2.0-alpha01'
 
     // On Device Machine Learnings
     implementation "com.google.android.odml:image:1.0.0-beta1"
