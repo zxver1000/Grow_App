@@ -1,5 +1,6 @@
 package com.example.vision_exam
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import java.io.Serializable
 

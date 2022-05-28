@@ -48,21 +48,23 @@ class BoardDetailActivity : AppCompatActivity() {
                 trainingInfo = db.boardDao().getTrainingInfo(curCalendarInfo.year,curCalendarInfo.month,curCalendarInfo.day)
             }
             if (trainingInfo.isNotEmpty()){
-                taskContentEditText.setText(trainingInfo[0].trainingProgress)
-                diaryContentEditText.setText(trainingInfo[0].trainingDiary)
+                Log.d(TAG, "initIntent: ${trainingInfo.toString()}")
+                taskContentEditText.setText(trainingInfo.last().trainingProgress)
+                diaryContentEditText.setText(trainingInfo.last().trainingDiary)
             }
         }
 
 
         saveBtn.setOnClickListener {
             if (taskContentEditText.text.toString().isEmpty() || diaryContentEditText.text.toString().isEmpty()){
-                Toast.makeText(this@BoardDetailActivity, "내용을 채워주세요~!!!@#!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@BoardDetailActivity, "내용을 채워주세요~!!", Toast.LENGTH_SHORT).show()
             }else{
                 curCalendarInfo.trainingDiary = diaryContentEditText.text.toString()
                 curCalendarInfo.trainingProgress = taskContentEditText.text.toString()
                 CoroutineScope(Dispatchers.IO).launch {
                     db.boardDao().insert(curCalendarInfo)
                 }
+                finish()
             }
         }
 
