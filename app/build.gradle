@@ -145,6 +145,9 @@ dependencies {
 
     // On Device Machine Learnings
     implementation "com.google.android.odml:image:1.0.0-beta1"
+
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
 configurations {
     // Resolves dependency conflict caused by some dependencies use

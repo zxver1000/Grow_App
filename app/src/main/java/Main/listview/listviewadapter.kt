@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vision_exam.MainActivity
 import com.example.vision_exam.R
+import com.example.vision_exam.kotlin.LivePreviewActivity
 
 
 class MyRecyclerView(items: ArrayList<ItemCard>) : RecyclerView.Adapter<MyRecyclerView.MyViewHolder>() {
@@ -51,7 +52,7 @@ class MyRecyclerView(items: ArrayList<ItemCard>) : RecyclerView.Adapter<MyRecycl
             }
                 .setPositiveButton("Start",DialogInterface.OnClickListener{
                     dialog,id->
-                    val intent = Intent(holder.itemView?.context, MainActivity::class.java)
+                    val intent = Intent(holder.itemView?.context, LivePreviewActivity::class.java)
                     ContextCompat.startActivity(holder.itemView.context,intent,null)
                 }).setNegativeButton("Cancle",DialogInterface.OnClickListener{
                     dialog,id->
