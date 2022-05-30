@@ -6,40 +6,54 @@
     android:layout_height="wrap_content"
     tools:context=".stopwatchFragment">
 
+    <Chronometer
+        android:id="@+id/yt_chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/youtube_view"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textSize="40sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
         android:orientation="horizontal">
-        <TextView
-            android:id="@+id/yt_sw_MinTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00'"
-            android:textColor="@color/black"
-            android:textSize="60sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/yt_sw_SecTV"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yt_startbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/youtube_stopwatch"
+            android:text="start"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yt_stopbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/youtube_stopwatch"
+            android:text="stop"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yt_resetbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/youtube_stopwatch"
+            android:text="reset"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
     </LinearLayout>
-
-    <Button
-        android:id="@+id/soundbtn"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#F30303"
-        android:text="stopwatch on/off"
-        android:textSize="12dp"
-        android:textColor="@color/white"/>
 
 </LinearLayout>
