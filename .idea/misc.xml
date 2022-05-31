@@ -3,18 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable-hdpi/ic_switch_camera_white_48dp.xml" value="0.172" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/custom_checkbox.xml" value="0.269" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/custom_levelbutton.xml" value="0.193" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/custon_levelbutton.xml" value="0.193" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/levelbutton_clicked.xml" value="0.172" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/levelbutton_unclicked.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/list_item_background.xml" value="0.172" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/logo_mlkit.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/mypage_border.xml" value="0.172" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/rounded_button.xml" value="0.269" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/rounded_checkbox.xml" value="0.269" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/rounded_editrext.xml" value="0.269" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/rounded_edittext.xml" value="0.269" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/splash_gradient_background.xml" value="0.193" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/splash_progressbar.xml" value="0.193" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_main2.xml" value="0.13652482269503546" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_my_page.xml" value="0.20989583333333334" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_settings.xml" value="0.13652482269503546" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_sign_up_body_part.xml" value="0.33" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_sign_up_level.xml" value="0.5" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_sign_up_profile.xml" value="0.25" />

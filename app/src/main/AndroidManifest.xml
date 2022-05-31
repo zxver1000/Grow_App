@@ -27,6 +27,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
         <activity
+            android:name="Main.myPageActivity"
+            android:exported="false" />
+        <activity
             android:name="Main.signup.SignUpLevelActivity"
             android:exported="false" />
         <activity
