@@ -156,7 +156,7 @@ class MainActivity :
                     R.string.desc_cameraxsource_demo_activity
                 )
 
-        private const val PERMISSION_REQUESTS = 1
+        public const val PERMISSION_REQUESTS = 1
 
         private val REQUIRED_RUNTIME_PERMISSIONS =
             arrayOf(

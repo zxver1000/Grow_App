@@ -30,6 +30,9 @@
             android:name="Main.myPageActivity"
             android:exported="false" />
         <activity
+            android:name="Main.resultPose.ResultActivity"
+            android:exported="false" />
+        <activity
             android:name="Main.signup.SignUpLevelActivity"
             android:exported="false" />
         <activity
