@@ -49,8 +49,13 @@ class SignUpLevelActivity : AppCompatActivity() {
 
 
         val C_button = findViewById<Button>(R.id.signup_level_continueButton)
+        val B_button = findViewById<Button>(R.id.signup_level_skipButton)
         C_button.setOnClickListener {
             val intent = Intent(this,StartActivity::class.java)
+            startActivity(intent)
+        }
+        B_button.setOnClickListener {
+            val intent = Intent(this,SignUpBodyPartActivity::class.java)
             startActivity(intent)
         }
     }

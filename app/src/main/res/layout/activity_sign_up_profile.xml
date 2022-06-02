@@ -102,16 +102,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:gravity="center">
-        <Button
-            android:id="@+id/signup_profile_skipButton"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="Back"
-            android:textAllCaps="false"
-            android:layout_marginRight="20dp"
-            android:textColor="#6842FF"
-            android:backgroundTint="#F0ECFF"/>
+
 
         <Button
             android:id="@+id/signup_profile_continueButton"

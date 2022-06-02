@@ -21,8 +21,8 @@
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-   app:itemIconTint="#4286f4"
-        app:itemTextColor="#4286f4"
+        app:itemIconTint="@color/colorPoint"
+        app:itemTextColor="@color/colorPoint"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navi_menu" />

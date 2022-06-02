@@ -57,6 +57,7 @@ dependencies {
 
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31'
     implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
 
     // Barcode model
     implementation 'com.google.mlkit:barcode-scanning:17.0.2'

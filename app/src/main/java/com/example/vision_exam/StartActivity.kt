@@ -43,21 +43,21 @@ class StartActivity : AppCompatActivity() {
                     true
                 }
                 R.id.second->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, badgeFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, youtubeFragment()).commit()
                     true
                 }
                 R.id.third->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, youtubeFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, boardFragment()).commit()
                     true
 
                 }
                 R.id.fourth->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, boardFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, poseFragment()).commit()
                     true
                 }
 
                 else -> {
-                    supportFragmentManager.beginTransaction().replace(fl.id, poseFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, mypageFragment()).commit()
                     true
                 }
 
