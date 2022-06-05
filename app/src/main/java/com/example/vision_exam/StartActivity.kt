@@ -16,6 +16,7 @@ import com.example.vision_exam.kotlin.CameraXSourceDemoActivity
 import com.example.vision_exam.kotlin.LivePreviewActivity
 import com.example.vision_exam.kotlin.StillImageActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.ArrayList
 
 class StartActivity : AppCompatActivity() {
@@ -34,6 +35,28 @@ class StartActivity : AppCompatActivity() {
         if (!allRuntimePermissionsGranted()) {
             getRuntimePermissions()
         }
+
+
+        Log.d("","시작")
+        var store= FirebaseFirestore.getInstance()
+
+        store.collection("종강").get().addOnSuccessListener {
+
+                task->
+            for (doc in task)
+            {
+                Log.d("", "${doc} 끝")
+            }
+
+        }
+        val user = hashMapOf(
+            "first" to "Alan",
+            "middle" to "Mathison",
+            "last" to "Turing",
+            "born" to 1912
+        )
+        store.collection("이름").add(user)
+
 
         supportFragmentManager.beginTransaction().add(fl.id, homeFragment()).commit()
         bn.setOnNavigationItemSelectedListener { item ->
@@ -67,6 +90,8 @@ class StartActivity : AppCompatActivity() {
         }
 
     }
+
+
 
     private fun allRuntimePermissionsGranted(): Boolean {
         for (permission in StartActivity.REQUIRED_RUNTIME_PERMISSIONS) {

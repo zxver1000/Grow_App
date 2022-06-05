@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "66444714087",
+    "project_id": "grow-4e25b",
+    "storage_bucket": "grow-4e25b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66444714087:android:a4fec27186118ba23534c2",
+        "android_client_info": {
+          "package_name": "com.example.vision_exam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66444714087-h39l965fk4tv5ikkmoogtvlsc2dlo1j4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYRmGfsBgmhXDzp9mqve-LFYcNpVY_Kfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66444714087-h39l965fk4tv5ikkmoogtvlsc2dlo1j4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,7 @@
 package Main
 
+import Main.signup.DBHelper
+import Main.signup.Data
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +13,7 @@ import android.widget.TextView
 import com.example.vision_exam.R
 
 
-class mypageFragment : Fragment() {
+class mypageFragment() : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,12 +21,20 @@ class mypageFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
+
         val root =  inflater.inflate(R.layout.fragment_mypage, container, false)
         val badge_button = root.findViewById<Button>(R.id.badge)
+        val mypageName = root.findViewById<TextView>(R.id.mypage_user_name)
+        val mypageNickName = root.findViewById<TextView>(R.id.mypage_user_nickname)
+        val mypageEmail = root.findViewById<TextView>(R.id.mypage_user_email)
+
+
+
+
 
         badge_button.setOnClickListener {
             activity?.let {
@@ -35,6 +45,5 @@ class mypageFragment : Fragment() {
 
         return root
     }
-
 
 }
