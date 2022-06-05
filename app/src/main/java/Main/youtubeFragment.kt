@@ -19,15 +19,15 @@ class youtubeFragment : Fragment() {
         view?.findViewById(R.id.yt_recyclerview) as RecyclerView
     }
     val exerciseList= arrayListOf<YoutubeContent>(
-        YoutubeContent("초급 - 전신","tzv5N3yikU4"),
-        YoutubeContent("중급 - 전신","lKwZ2DU4P-A"),
-        YoutubeContent("고급 - 전신","wrLlzn5TjLY"),
-        YoutubeContent("초급 - 상체","54tTYO-vU2E"),
-        YoutubeContent("중급 - 상체","GZtB7W9Uafk"),
-        YoutubeContent("고급 - 상체","o-9ZuMtC8MA"),
-        YoutubeContent("초급 - 하체","qEoa40A_aZY"),
-        YoutubeContent("중급 - 하체","pDFuLG0xrsU"),
-        YoutubeContent("고급 - 하체","js8z5wIZ0wg"),
+        YoutubeContent("beginner:fullbody","tzv5N3yikU4"),
+        YoutubeContent("intermediate:fullbody","lKwZ2DU4P-A"),
+        YoutubeContent("advanced:fullbody","wrLlzn5TjLY"),
+        YoutubeContent("beginner:upperbody","54tTYO-vU2E"),
+        YoutubeContent("intermediate:upperbody","GZtB7W9Uafk"),
+        YoutubeContent("advanced:uppperbody","o-9ZuMtC8MA"),
+        YoutubeContent("beginner:lowerbody","qEoa40A_aZY"),
+        YoutubeContent("intermediate:lowerbody","pDFuLG0xrsU"),
+        YoutubeContent("advanced:lowerbody","js8z5wIZ0wg"),
     )
 
     override fun onCreateView(
