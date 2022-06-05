@@ -142,7 +142,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:gravity="center">
         <Button
             android:id="@+id/signup_bodyPart_skipButton"

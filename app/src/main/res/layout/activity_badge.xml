@@ -1,0 +1,426 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="Main.BadgeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/badge_backButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_baseline_chevron_left_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="뱃지"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_attendance_first"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="첫 출석 !"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="새로운 시작"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_attendance_three"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="출석 3회"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="벌써 이만큼?!"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_attendance_five"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="출석 5회"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="대단해요!"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_record_first"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="첫 운동기록 !"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="파이팅 : )"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_record_ten"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="운동기록 10회"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="응원할게요 ~"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_record_thirty"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="운동기록 30회"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="멋져요!"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_use_one"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="앱 1시간 사용"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="당신은 최고!"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_use_five"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="앱 5시간 사용"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="너무 잘했어요"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/badge_use_ten"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/badge_circle_shape"
+                            android:paddingTop="10dp"
+                            android:paddingRight="18dp"
+                            android:paddingBottom="12dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/badge_lock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="앱 10시간 사용"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="홈트 마스터를 위해 !"
+                            android:textColor="@color/gray"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -19,14 +19,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.ArrayList
 
-class d
-{
-    private var name=2;
-    constructor(name:Int)
-    {
-        this.name=name
-    }
-}
 
 class StartActivity : AppCompatActivity() {
 
@@ -42,6 +34,9 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
+
+
+        Log.d("","시작")
         var store= FirebaseFirestore.getInstance()
 
         store.collection("종강").get().addOnSuccessListener {
@@ -62,10 +57,6 @@ class StartActivity : AppCompatActivity() {
         store.collection("이름").add(user)
 
 
-        if (!allRuntimePermissionsGranted()) {
-            getRuntimePermissions()
-        }
-
         supportFragmentManager.beginTransaction().add(fl.id, homeFragment()).commit()
         bn.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
@@ -74,21 +65,21 @@ class StartActivity : AppCompatActivity() {
                     true
                 }
                 R.id.second->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, badgeFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, youtubeFragment()).commit()
                     true
                 }
                 R.id.third->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, youtubeFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, boardFragment()).commit()
                     true
 
                 }
                 R.id.fourth->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, boardFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, poseFragment()).commit()
                     true
                 }
 
                 else -> {
-                    supportFragmentManager.beginTransaction().replace(fl.id, poseFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, mypageFragment()).commit()
                     true
                 }
 
@@ -98,6 +89,8 @@ class StartActivity : AppCompatActivity() {
         }
 
     }
+
+
 
     private fun allRuntimePermissionsGranted(): Boolean {
         for (permission in StartActivity.REQUIRED_RUNTIME_PERMISSIONS) {

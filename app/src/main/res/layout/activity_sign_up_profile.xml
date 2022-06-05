@@ -35,7 +35,7 @@
         android:id="@+id/signup_profile_image"
         android:layout_width="118dp"
         android:layout_height="124dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="30dp"
         android:background="#59918585"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/ic_baseline_person_24" />
@@ -51,6 +51,7 @@
         android:ems="10"
         android:hint="   Name"
         android:textSize="15sp"
+        android:textColor="@color/black"
         android:inputType="textPersonName"
         android:textColorHint="#B26E6969" />
 
@@ -61,6 +62,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="18dp"
+        android:textColor="@color/black"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:hint="   NickName"
@@ -75,6 +77,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="18dp"
+        android:textColor="@color/black"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:hint="   Email"
@@ -89,6 +92,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="18dp"
+        android:textColor="@color/black"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:hint="   phone Number"
@@ -102,16 +106,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:gravity="center">
-        <Button
-            android:id="@+id/signup_profile_skipButton"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="Back"
-            android:textAllCaps="false"
-            android:layout_marginRight="20dp"
-            android:textColor="#6842FF"
-            android:backgroundTint="#F0ECFF"/>
+
 
         <Button
             android:id="@+id/signup_profile_continueButton"
@@ -120,6 +115,8 @@
             android:text="Continue"
             android:textAllCaps="false"
             android:background="@drawable/rounded_button"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:backgroundTint="#6842FF"/>
     </LinearLayout>
         </LinearLayout>

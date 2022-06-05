@@ -12,11 +12,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
+import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.vision_exam.kotlin.CameraXLivePreviewActivity
@@ -32,7 +29,7 @@ class MainActivity :
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
         setContentView(R.layout.activity_chooser)
-
+        //tt
 
         // Set up ListView and Adapter
         val listView = findViewById<ListView>(R.id.test_activity_list_view)
@@ -43,6 +40,9 @@ class MainActivity :
         if (!allRuntimePermissionsGranted()) {
             getRuntimePermissions()
         }
+
+        val button = findViewById<Button>(R.id.button)
+
 
 
     }
