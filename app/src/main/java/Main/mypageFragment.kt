@@ -1,7 +1,5 @@
 package Main
 
-import Main.signup.DBHelper
-import Main.signup.Data
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment

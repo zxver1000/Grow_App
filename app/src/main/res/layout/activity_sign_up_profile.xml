@@ -26,7 +26,7 @@
         android:bufferType="spannable"
         android:gravity="center"
         android:layout_marginTop="30dp"
-        android:text="1. 당신의 프로필을 \n    입력해주세요"
+        android:text="1. Please enter your profile"
         android:textColor="#0C0C0C"
         android:textSize="30dp"
         android:textStyle="bold" />

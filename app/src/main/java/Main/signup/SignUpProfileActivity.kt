@@ -17,7 +17,7 @@ import com.example.vision_exam.R
    사용자 회원가입 - 1. 프로필 입력 화면
  */
 class SignUpProfileActivity : AppCompatActivity() {
-    lateinit var dbHelper: DBHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_profile)
@@ -25,13 +25,13 @@ class SignUpProfileActivity : AppCompatActivity() {
     }
 
     private fun initLayout() {
-        dbHelper = DBHelper(this)
+
         //textView 일부분 색 변경
         val title = findViewById<TextView>(R.id.signup_profile_title)
         val textData:String = title.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorSpan = ForegroundColorSpan(Color.parseColor("#6842FF"))
-        builder.setSpan(colorSpan,7,10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        builder.setSpan(colorSpan,21,28, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         title.text = builder
 
         val editName = findViewById<EditText>(R.id.signup_profile_name)
@@ -44,14 +44,6 @@ class SignUpProfileActivity : AppCompatActivity() {
             val nickName = editNickName.text.toString()
             val email = editEmail.text.toString()
 
-            val data = Data(name,nickName, email,null,null,null,0,0,0)
-            val result = dbHelper.insertData(data)
-
-            if(result) { //성공했을 때
-                Toast.makeText(this@SignUpProfileActivity, "Data INSERT SUCCESS", Toast.LENGTH_SHORT).show()
-            }else {
-                Toast.makeText(this@SignUpProfileActivity, "Data INSERT FAILED", Toast.LENGTH_SHORT).show()
-            }
 
             val intent = Intent(this, SignUpBodyPartActivity::class.java)
             startActivity(intent)

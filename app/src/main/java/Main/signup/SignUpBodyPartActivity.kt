@@ -28,7 +28,7 @@ class SignUpBodyPartActivity : AppCompatActivity() {
         val textData:String = title.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorSpan = ForegroundColorSpan(Color.parseColor("#6842FF"))
-        builder.setSpan(colorSpan,12,14, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        builder.setSpan(colorSpan,23,32, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         title.text = builder
 
 

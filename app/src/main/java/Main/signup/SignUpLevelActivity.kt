@@ -28,7 +28,7 @@ class SignUpLevelActivity : AppCompatActivity() {
         val textData:String = title.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorSpan = ForegroundColorSpan(Color.parseColor("#6842FF"))
-        builder.setSpan(colorSpan,7,12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        builder.setSpan(colorSpan,22,36, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         title.text = builder
 
         val basicButton = findViewById<Button>(R.id.signup_level_basic)
