@@ -34,8 +34,6 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-
-
         Log.d("","시작")
         var store= FirebaseFirestore.getInstance()
 
@@ -90,8 +88,6 @@ class StartActivity : AppCompatActivity() {
 
     }
 
-
-
     private fun allRuntimePermissionsGranted(): Boolean {
         for (permission in StartActivity.REQUIRED_RUNTIME_PERMISSIONS) {
             permission?.let {
@@ -131,8 +127,6 @@ class StartActivity : AppCompatActivity() {
         Log.i(StartActivity.TAG, "Permission NOT granted: $permission")
         return false
     }
-
-
 
     companion object {
         private const val TAG = "ChooserActivity"
