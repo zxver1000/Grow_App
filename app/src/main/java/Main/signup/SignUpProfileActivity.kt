@@ -31,7 +31,7 @@ class SignUpProfileActivity : AppCompatActivity() {
         val textData:String = title.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorSpan = ForegroundColorSpan(Color.parseColor("#6842FF"))
-        builder.setSpan(colorSpan,7,10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        builder.setSpan(colorSpan,21,28, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         title.text = builder
 
         val editName = findViewById<EditText>(R.id.signup_profile_name)

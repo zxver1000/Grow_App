@@ -39,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="뱃지"
+                    android:text="Badge"
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold" />
@@ -79,8 +79,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="첫 출석 !"
+                            android:text="Attendance \n 3 times"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -89,7 +90,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="새로운 시작"
+                            android:text="New beginning !"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
@@ -119,7 +120,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="출석 3회"
+                            android:gravity="center"
+                            android:text="Attendance \n 5 times"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -128,7 +130,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="벌써 이만큼?!"
+                            android:text="Already this much?!"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
@@ -158,7 +160,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="출석 5회"
+                            android:gravity="center"
+                            android:text="Attendance \n 10 times"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -167,7 +170,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="대단해요!"
+                            android:text="Great!"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
@@ -203,7 +206,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="첫 운동기록 !"
+                            android:gravity="center"
+                            android:text="First \n calendar record !"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -212,7 +216,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="파이팅 : )"
+                            android:text="Cheer up : )"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
@@ -242,7 +246,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="운동기록 10회"
+                            android:gravity="center"
+                            android:text="Three \n calendar records"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -251,7 +256,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="응원할게요 ~"
+                            android:text="I'll be rooting \n for you ~"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
@@ -281,7 +286,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="운동기록 30회"
+                            android:gravity="center"
+                            android:text="Ten \n calendar records"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -290,7 +296,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="멋져요!"
+                            android:text="That's cool!"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
@@ -325,7 +331,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="앱 1시간 사용"
+                            android:gravity="center"
+                            android:text="First \n watch youtube"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -334,7 +341,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="당신은 최고!"
+                            android:text="You're the best!"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
@@ -364,7 +371,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="앱 5시간 사용"
+                            android:gravity="center"
+                            android:text="Three times \n watch youtube"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -373,7 +381,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="너무 잘했어요"
+                            android:text="You did a great job"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
@@ -403,7 +411,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="앱 10시간 사용"
+                            android:gravity="center"
+                            android:text="Five times \n watch youtube"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -412,7 +421,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="홈트 마스터를 위해 !"
+                            android:text="Perfect \n home training!"
                             android:textColor="@color/gray"
                             android:textSize="13dp"
                             android:textStyle="bold" />
