@@ -64,6 +64,7 @@ class BoardDetailActivity : AppCompatActivity() {
                 CoroutineScope(Dispatchers.IO).launch {
                     db.boardDao().insert(curCalendarInfo)
                 }
+                Toast.makeText(this@BoardDetailActivity, "Saved~!!", Toast.LENGTH_SHORT).show()
                 finish()
             }
         }
