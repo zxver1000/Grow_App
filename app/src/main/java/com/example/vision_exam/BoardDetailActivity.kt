@@ -57,7 +57,7 @@ class BoardDetailActivity : AppCompatActivity() {
 
         saveBtn.setOnClickListener {
             if (taskContentEditText.text.toString().isEmpty() || diaryContentEditText.text.toString().isEmpty()){
-                Toast.makeText(this@BoardDetailActivity, "내용을 채워주세요~!!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@BoardDetailActivity, "Fill in the blanks~!!", Toast.LENGTH_SHORT).show()
             }else{
                 curCalendarInfo.trainingDiary = diaryContentEditText.text.toString()
                 curCalendarInfo.trainingProgress = taskContentEditText.text.toString()

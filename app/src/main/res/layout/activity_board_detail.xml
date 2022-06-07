@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="캘린더"
+        android:text="Calendar"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/task"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="131dp"
-        android:text="홈트 진행 내용"
+        android:text="Progress Content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +37,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="내용을 입력하세요."
+        android:hint="Write here."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task" />
 
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="운동 소감"
+        android:text="Training Diary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,7 +59,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="내용을 입력하세요."
+        android:hint="Write here."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/diary" />
 
