@@ -3,6 +3,7 @@ package com.example.vision_exam
 import Main.*
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -34,26 +35,10 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        Log.d("","시작")
-        var store= FirebaseFirestore.getInstance()
-
-        store.collection("종강").get().addOnSuccessListener {
-
-                task->
-            for (doc in task)
-            {
-                Log.d("", "${doc} 끝")
-            }
-
+       val email = intent.getStringExtra("EMAIL3")
+        if (email != null) {
+            Log.d("TEST4",email)
         }
-        val user = hashMapOf(
-            "first" to "Alan",
-            "middle" to "Mathison",
-            "last" to "Turing",
-            "born" to 1912
-        )
-        store.collection("이름").add(user)
-
 
         supportFragmentManager.beginTransaction().add(fl.id, homeFragment()).commit()
         bn.setOnNavigationItemSelectedListener { item ->
@@ -63,7 +48,11 @@ class StartActivity : AppCompatActivity() {
                     true
                 }
                 R.id.second->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, youtubeFragment()).commit()
+                    val bundle = Bundle()
+                    bundle.putString("EMAIL4",email)
+                    val youTubeFragment = youtubeFragment()
+                    youTubeFragment.arguments = bundle
+                    supportFragmentManager.beginTransaction().replace(fl.id, youTubeFragment).commit()
                     true
                 }
                 R.id.third->{
@@ -77,7 +66,11 @@ class StartActivity : AppCompatActivity() {
                 }
 
                 else -> {
-                    supportFragmentManager.beginTransaction().replace(fl.id, mypageFragment()).commit()
+                    val bundle = Bundle()
+                    bundle.putString("EMAIL4",email)
+                    val myPageFragment = mypageFragment()
+                    myPageFragment.arguments = bundle
+                    supportFragmentManager.beginTransaction().add(fl.id, myPageFragment).commit()
                     true
                 }
 

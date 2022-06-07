@@ -10,10 +10,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.content.ContextCompat
 import com.example.vision_exam.MyItemRecyclerViewAdapter.ViewHolder
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MyItemRecyclerViewAdapter(
     private val values: ArrayList<YoutubeContent>
 ) : RecyclerView.Adapter<ViewHolder>() {
+
+    val firebaseStore = FirebaseFirestore.getInstance()
 
     interface OnItemClickListener{
         fun OnItemClick(data: YoutubeContent, position: Int)
