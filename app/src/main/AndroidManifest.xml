@@ -25,10 +25,7 @@
         android:label="Klap-Blind"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat" >
-        <activity
-            android:name="Main.home.SubActivity02"
-            android:exported="false" />
+        android:theme="@style/Theme.AppCompat">
         <activity
             android:name="Main.resultPose.ResultActivity"
             android:exported="false" />
@@ -48,16 +45,13 @@
 
         <activity
             android:name="Main.signup.splashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="Main.home.SubActivity01"
-            android:exported="true" />
         <activity
             android:name="Main.signup.SignUpProfileActivity"
             android:exported="true" />
@@ -67,7 +61,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".StartActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
