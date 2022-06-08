@@ -4,6 +4,7 @@ import Main.listview.ItemCard
 import Main.listview.MyRecyclerView
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -28,6 +29,7 @@ class poseFragment : Fragment() {
         val button:Button=root.findViewById(R.id.button3)
         print("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
         button?.setOnClickListener{
+            Log.d("TEST","클릭성공")
             print("!11")
             val intent = Intent(activity, MainActivity::class.java)
             startActivity(intent)

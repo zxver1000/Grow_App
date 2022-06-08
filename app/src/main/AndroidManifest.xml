@@ -24,12 +24,16 @@
     </queries>
 
     <application
+        android:name="Main.signup.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Klap-Blind"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name="Main.signup.SignUpFormActivity"
+            android:exported="false" />
         <activity
             android:name="Main.BadgeActivity"
             android:exported="false" />
@@ -127,6 +131,28 @@
             android:exported="false" />
 
 
+            android:name="com.example.vision_exam.kotlin.ChooserActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.vision_exam.kotlin.LivePreviewActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.vision_exam.kotlin.CameraXLivePreviewActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.vision_exam.kotlin.CameraXSourceDemoActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.vision_exam.kotlin.StillImageActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".preference.SettingsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

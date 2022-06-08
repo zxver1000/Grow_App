@@ -1,6 +1,5 @@
 package Main.signup
 
-import Main.homeFragment
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +9,6 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.widget.Button
-import android.widget.CheckBox
 import android.widget.TextView
 import com.example.vision_exam.R
 import com.example.vision_exam.StartActivity
@@ -87,11 +85,13 @@ class SignUpLevelActivity : AppCompatActivity() {
                 "calenderRecordNum" to 0,
                 "youtubeWatchNum" to 0,
                 "bodypart" to bodypart,
-                "level" to level
+                "level" to level,
+                "shape" to ""
+
             )
             firebaseStore.collection("회원정보").document(email).set(f_level)
 
-            val intent = Intent(this, StartActivity::class.java)
+            val intent = Intent(this,SignUpFormActivity::class.java)
             intent.putExtra("EMAIL3",email)
             intent.putExtra("NAME3",name)
             intent.putExtra("NICKNAME3",nickName)

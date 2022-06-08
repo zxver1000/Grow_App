@@ -36,15 +36,16 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        val email = intent.getStringExtra("EMAIL3")
+        val email = intent.getStringExtra("EMAIL4")
         if (email != null) {
-            Log.d("TEST4",email)
+            Log.d("TEST5",email)
         }
-        val name = intent.getStringExtra("NAME3")!!
-        val nickName = intent.getStringExtra("NICKNAME3")!!
-        val firstAccessDate = intent.getStringExtra("FIRSTACCESSDATE3")!!
-        val bodypart = intent.getStringExtra("BODYPART3")!!
-        val level = intent.getStringExtra("LEVEL3")!!
+        val name = intent.getStringExtra("NAME4")!!
+        val nickName = intent.getStringExtra("NICKNAME4")!!
+        val firstAccessDate = intent.getStringExtra("FIRSTACCESSDATE4")!!
+        val bodypart = intent.getStringExtra("BODYPART4")!!
+        val level = intent.getStringExtra("LEVEL4")!!
+        val shape = intent.getStringExtra("SHAPE4")!!
         Log.d("","${email} 이거 맞나요2?")
 
         var fragment2=homeFragment()
@@ -55,6 +56,7 @@ class StartActivity : AppCompatActivity() {
         bundle.putString("bodypart",bodypart)
         bundle.putString("level",level)
         bundle.putString("date",firstAccessDate)
+        bundle.putString("shape",shape)
         fragment2.arguments=bundle
 
         supportFragmentManager.beginTransaction().add(fl.id, fragment2).commit()
@@ -66,7 +68,7 @@ class StartActivity : AppCompatActivity() {
                 }
                 R.id.second->{
                     val bundle = Bundle()
-                    bundle.putString("EMAIL4",email)
+                    bundle.putString("EMAIL5",email)
                     val youTubeFragment = youtubeFragment()
                     youTubeFragment.arguments = bundle
                     supportFragmentManager.beginTransaction().replace(fl.id, youTubeFragment).commit()
@@ -84,7 +86,7 @@ class StartActivity : AppCompatActivity() {
 
                 else -> {
                     val bundle = Bundle()
-                    bundle.putString("EMAIL4",email)
+                    bundle.putString("EMAIL5",email)
                     val myPageFragment = mypageFragment()
                     myPageFragment.arguments = bundle
                     supportFragmentManager.beginTransaction().add(fl.id, myPageFragment).commit()

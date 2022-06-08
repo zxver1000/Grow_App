@@ -10,10 +10,10 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.widget.Button
-import android.widget.CheckBox
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import com.example.vision_exam.R
+import android.widget.CheckBox
+import androidx.annotation.RequiresApi
 import com.google.firebase.firestore.FirebaseFirestore
 
 /*
@@ -90,7 +90,8 @@ class SignUpBodyPartActivity : AppCompatActivity() {
                 "calenderRecordNum" to 0,
                 "youtubeWatchNum" to 0,
                 "bodypart" to bodypart,
-                "level" to ""
+                "level" to "",
+                "shape" to ""
             )
             firebaseStore.collection("회원정보").document(email).set(f_bodypart)
 

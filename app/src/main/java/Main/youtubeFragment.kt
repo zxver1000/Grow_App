@@ -1,6 +1,7 @@
 package Main
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,8 @@ import com.example.vision_exam.YoutubeContent
 
 
 class youtubeFragment : Fragment() {
+
+    val email = arguments?.getString("EMAIL5").toString()
 
     private val yt_recyclerview: RecyclerView by lazy {
         view?.findViewById(R.id.yt_recyclerview) as RecyclerView
@@ -49,7 +52,7 @@ class youtubeFragment : Fragment() {
 
         adapter.itemClickListener=object :MyItemRecyclerViewAdapter.OnItemClickListener{
             override fun OnItemClick(data: YoutubeContent, position: Int) {
-                Toast.makeText(activity,"클릭 성공.", Toast.LENGTH_SHORT).show();
+
             }
         }
         yt_recyclerview.adapter=adapter

@@ -4,6 +4,7 @@ import Main.home.SubActivity01
 import Main.home.SubActivity02
 import Main.signup.SignUpLevelActivity
 import android.content.Intent
+
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -27,6 +28,7 @@ class homeFragment : Fragment() {
         val bodypart1 = arguments?.getString("bodypart")
         val level1 = arguments?.getString("level")
         val date1 = arguments?.getString("date")
+        val shape1 = arguments?.getString("shape")
         //Log.d("","${email1} 이거 맞나요?")
         // Inflate the layout for this fragment
 
@@ -54,6 +56,7 @@ class homeFragment : Fragment() {
         nick_text.setText(nickname1)
         level_text.setText(level1)
         date_text.setText(date1)
+        shape_text.setText(shape1)
         //shape_text
 
         return root

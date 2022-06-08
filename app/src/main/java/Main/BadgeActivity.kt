@@ -24,6 +24,10 @@ class BadgeActivity : AppCompatActivity() {
 
     private fun initLayout() {
         val B_button = findViewById<ImageButton>(R.id.badge_backButton)
+        B_button.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.mypage_framelayout, mypageFragment()).commit()
+        }
+
 
 
     }

@@ -55,11 +55,14 @@
 </LinearLayout>
     <LinearLayout
         android:id="@+id/layout02"
-        android:layout_width="match_parent"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="80dp"
         android:gravity="center"
+        android:background="@color/light_grey_400"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
         app:layout_constraintTop_toBottomOf="@id/layout01">
 
         <ImageView
@@ -67,7 +70,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/ic_launcher_background"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="5dp"
             android:layout_marginBottom="15dp"
             />
             <LinearLayout
@@ -80,7 +83,7 @@
                 <TextView
                     android:id="@+id/exname"
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="20dp"
                     android:text="Name"
                     android:textColor="#000000"
