@@ -1,9 +1,11 @@
 package Main.listview
 
+import Main.signup.MyApplication
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +15,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.vision_exam.MainActivity
 import com.example.vision_exam.R
 import com.example.vision_exam.kotlin.LivePreviewActivity
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class MyRecyclerView(items: ArrayList<ItemCard>) : RecyclerView.Adapter<MyRecyclerView.MyViewHolder>() {
 
+
+    var firebaseStore = FirebaseFirestore.getInstance() //firebase 연동
+    val fbpath = firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
+    var nowPoseNum = 0
 
     var items = items
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -52,6 +59,19 @@ class MyRecyclerView(items: ArrayList<ItemCard>) : RecyclerView.Adapter<MyRecycl
             }
                 .setPositiveButton("Start",DialogInterface.OnClickListener{
                     dialog,id->
+
+                    //Start 버튼 클릭시, FireStore의 poseActiveNum 숫자 변경
+                    fbpath.addSnapshotListener { snapshot, e ->
+                        if(snapshot != null) {
+                            nowPoseNum = snapshot.data!!["poseActiveNum"].toString().toInt()
+                        }
+                    }
+                    nowPoseNum+=1
+                    Log.d("youtube",nowPoseNum.toString())
+
+                    firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
+                        .update("poseActiveNum",nowPoseNum)
+
                     val intent = Intent(holder.itemView?.context, LivePreviewActivity::class.java)
                     ContextCompat.startActivity(holder.itemView.context,intent,null)
                 }).setNegativeButton("Cancle",DialogInterface.OnClickListener{

@@ -17,6 +17,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.vision_exam.R
+import com.example.vision_exam.preference.PreferenceUtils
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -28,8 +29,10 @@ import java.time.LocalDate
 class SignUpProfileActivity : AppCompatActivity() {
     var firebaseStore = FirebaseFirestore.getInstance() //firebase 연동
 
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_profile)
 
@@ -53,14 +56,14 @@ class SignUpProfileActivity : AppCompatActivity() {
             val nickName = editNickName.text.toString()
             val email = editEmail.text.toString()
 
-
+            MyApplication.prefs.myEditText = email
             //회원정보 저장 - firebase에 추가
             val user = hashMapOf(
                 "name" to name,
                 "nickName" to nickName,
                 "email" to email,
                 "firstAccessDate" to firstAccessDate,
-                "accessNum" to 0,
+                "poseActiveNum" to 0,
                 "calenderRecordNum" to 0,
                 "youtubeWatchNum" to 0
             )
@@ -75,7 +78,7 @@ class SignUpProfileActivity : AppCompatActivity() {
 
             val intent = Intent(this, SignUpBodyPartActivity::class.java)
             intent.putExtra("EMAIL",email)
-            Log.d("TEST",email)
+
             startActivity(intent)
           }
         }

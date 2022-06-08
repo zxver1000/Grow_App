@@ -17,6 +17,8 @@ import com.example.vision_exam.YoutubeContent
 
 class youtubeFragment : Fragment() {
 
+    val email = arguments?.getString("EMAIL5").toString()
+
     private val yt_recyclerview: RecyclerView by lazy {
         view?.findViewById(R.id.yt_recyclerview) as RecyclerView
     }
@@ -50,7 +52,7 @@ class youtubeFragment : Fragment() {
 
         adapter.itemClickListener=object :MyItemRecyclerViewAdapter.OnItemClickListener{
             override fun OnItemClick(data: YoutubeContent, position: Int) {
-                Log.d("TEST","클릭성공")
+
             }
         }
         yt_recyclerview.adapter=adapter
