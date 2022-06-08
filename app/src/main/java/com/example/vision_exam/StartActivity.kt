@@ -16,9 +16,20 @@ import com.example.vision_exam.kotlin.CameraXSourceDemoActivity
 import com.example.vision_exam.kotlin.LivePreviewActivity
 import com.example.vision_exam.kotlin.StillImageActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.ArrayList
 
+class d
+{
+    private var name=2;
+    constructor(name:Int)
+    {
+        this.name=name
+    }
+}
+
 class StartActivity : AppCompatActivity() {
+
 
     private val fl: FrameLayout by lazy{
         findViewById(R.id.fl_container)
@@ -30,6 +41,26 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
+
+        var store= FirebaseFirestore.getInstance()
+
+        store.collection("종강").get().addOnSuccessListener {
+
+                task->
+            for (doc in task)
+            {
+                Log.d("", "${doc} 끝")
+            }
+
+        }
+        val user = hashMapOf(
+            "first" to "Alan",
+            "middle" to "Mathison",
+            "last" to "Turing",
+            "born" to 1912
+        )
+        store.collection("이름").add(user)
+
 
         if (!allRuntimePermissionsGranted()) {
             getRuntimePermissions()
