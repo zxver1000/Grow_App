@@ -41,6 +41,7 @@ class youtubeplayerActivity : AppCompatActivity() {
         val video=intent.getSerializableExtra("video") as YoutubeContent
         val videoId=video.videoId
         lifecycle.addObserver(youTubePlayerView)
+        gettoday()
 
         youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(youTubePlayer: YouTubePlayer) {
@@ -74,7 +75,6 @@ class youtubeplayerActivity : AppCompatActivity() {
         var minute=(interval/1000/60).toInt()
         Log.d("check","${minute}")
 
-        gettoday()
         curCalendarInfo.minute+=minute
 
         CoroutineScope(Dispatchers.IO).launch {
@@ -101,6 +101,8 @@ class youtubeplayerActivity : AppCompatActivity() {
             }
             if (trainingInfo.isNotEmpty()){
                 curCalendarInfo.minute=trainingInfo.last().minute
+                curCalendarInfo.trainingProgress=trainingInfo.last().trainingProgress
+                curCalendarInfo.trainingDiary=trainingInfo.last().trainingDiary
                 Log.d("check","${curCalendarInfo.minute}")
             }
         }
