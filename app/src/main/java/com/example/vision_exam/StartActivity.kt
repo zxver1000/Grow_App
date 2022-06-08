@@ -42,6 +42,7 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
+        /*
         var store= FirebaseFirestore.getInstance()
 
         store.collection("종강").get().addOnSuccessListener {
@@ -59,7 +60,7 @@ class StartActivity : AppCompatActivity() {
             "last" to "Turing",
             "born" to 1912
         )
-        store.collection("이름").add(user)
+        store.collection("이름").add(user)*/
 
 
         if (!allRuntimePermissionsGranted()) {

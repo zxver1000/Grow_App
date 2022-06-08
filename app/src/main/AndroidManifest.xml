@@ -31,6 +31,9 @@
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:exported="false" />
         <activity
+            android:name=".BoardDetailActivity"
+            android:exported="false" />
+        <activity
             android:name="Main.resultPose.ResultActivity"
             android:exported="false" />
         <activity
