@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context="Main.signup.SignUpBodyPartActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/signup_bodyPart_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:bufferType="spannable"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="2. Please choose \n the body part \n you want to work out"
+        android:textColor="#0C0C0C"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+    <CheckBox
+        android:id="@+id/bodyPart_thigh"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/custom_checkbox"
+        android:button="@android:color/transparent"
+        android:paddingLeft="10dp"
+        android:text="Thigh"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp" />
+
+    <CheckBox
+        android:id="@+id/bodyPart_belly"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_checkbox"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Belly"
+        android:paddingLeft="10dp"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp" />
+    <CheckBox
+        android:id="@+id/bodyPart_side"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_checkbox"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Side"
+        android:paddingLeft="10dp"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp" />
+    <CheckBox
+        android:id="@+id/bodyPart_eight"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_checkbox"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Arm"
+        android:paddingLeft="10dp"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp" />
+    <CheckBox
+        android:id="@+id/bodyPart_back"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_checkbox"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Back"
+        android:paddingLeft="10dp"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp" />
+    <CheckBox
+        android:id="@+id/bodyPart_calf"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_checkbox"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Calf"
+        android:paddingLeft="10dp"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp" />
+    <CheckBox
+        android:id="@+id/bodyPart_shoulder"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_checkbox"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Shoulder"
+        android:paddingLeft="10dp"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp" />
+    <CheckBox
+        android:id="@+id/bodyPart_chest"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:button="@android:color/transparent"
+        android:background="@drawable/custom_checkbox"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Chest"
+        android:paddingLeft="10dp"
+        android:textColor="#0C0C0C"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/signup_bodyPart_skipButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:layout_marginRight="20dp"
+            android:textColor="#6842FF"
+            android:backgroundTint="#F0ECFF"/>
+
+        <Button
+            android:id="@+id/signup_bodyPart_continueButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#6842FF"/>
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

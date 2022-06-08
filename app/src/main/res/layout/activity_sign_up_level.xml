@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context="Main.signup.SignUpLevelActivity">
+
+    <TextView
+        android:id="@+id/signup_level_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:bufferType="spannable"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="3. Please choose your exercise level"
+        android:textColor="#0C0C0C"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/signup_level_basic"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:text="Beginner"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        android:textColor="@android:color/black"
+        android:textAlignment="textStart"
+        android:textSize="20dp"
+        android:paddingLeft="30dp"
+        android:background="@drawable/custom_levelbutton"/>
+
+    <Button
+        android:id="@+id/signup_level_intermediate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:text="Intermediate"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textAlignment="textStart"
+        android:textSize="20dp"
+        android:paddingLeft="30dp"
+        android:background="@drawable/custom_levelbutton"/>
+
+    <Button
+        android:id="@+id/signup_level_senior"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:text="Advanced"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textAlignment="textStart"
+        android:textSize="20dp"
+        android:paddingLeft="30dp"
+        android:background="@drawable/custom_levelbutton"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/signup_level_skipButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:layout_marginRight="20dp"
+            android:textColor="#6842FF"
+            android:backgroundTint="#F0ECFF"/>
+
+        <Button
+            android:id="@+id/signup_level_continueButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#6842FF"/>
+    </LinearLayout>
+
+</LinearLayout>

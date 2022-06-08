@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context="Main.signup.SignUpProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/signup_profile_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:bufferType="spannable"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="1. Please enter your profile"
+        android:textColor="#0C0C0C"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/signup_profile_image"
+        android:layout_width="118dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="30dp"
+        android:background="#59918585"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <EditText
+        android:id="@+id/signup_profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="   Name"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"
+        android:textColorHint="#B26E6969" />
+
+    <EditText
+        android:id="@+id/signup_profile_nickName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="   NickName"
+        android:textSize="15sp"
+        android:inputType="textPersonName"
+        android:textColorHint="#B26E6969" />
+
+    <EditText
+        android:id="@+id/signup_profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="   Email"
+        android:textSize="15sp"
+        android:inputType="textPersonName"
+        android:textColorHint="#B26E6969" />
+
+    <EditText
+        android:id="@+id/signup_profile_phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="   phone Number"
+        android:textSize="15sp"
+        android:inputType="number"
+        android:textColorHint="#B26E6969" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/signup_profile_continueButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#6842FF"/>
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
