@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text="운동 추천"
+        android:text="Exercise Recommendation"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -34,7 +34,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             app:layout_constraintBottom_toTopOf="@id/layout_shape"
-            android:text="추천하는 운동은"
+            android:text="The exercise I recommend is"
             android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:background="@color/gray"
             app:layout_constraintTop_toBottomOf="@id/ment"
             android:orientation="horizontal">
             
@@ -89,7 +90,7 @@
 
                 <TextView
                     android:id="@+id/shape_name"
-                    android:layout_width="85dp"
+                    android:layout_width="180dp"
                     android:layout_height="25dp"
                     android:text="운동명"
                     android:textStyle="bold"
@@ -127,6 +128,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/ment"
+            android:background="@color/gray"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -160,7 +162,7 @@
 
                 <TextView
                     android:id="@+id/level_name"
-                    android:layout_width="85dp"
+                    android:layout_width="180dp"
                     android:layout_height="25dp"
                     android:text="운동명"
                     android:textStyle="bold"
@@ -196,6 +198,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/ment"
+            android:background="@color/gray"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -224,12 +227,12 @@
 
             <LinearLayout
                 android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_height="140dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/equip_name"
-                    android:layout_width="85dp"
+                    android:layout_width="180dp"
                     android:layout_height="25dp"
                     android:text="운동명"
                     android:textStyle="bold"

@@ -122,6 +122,8 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-analytics-ktx:21.0.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.1.2'
+    implementation 'androidx.fragment:fragment:1.4.1'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.1.1'
 
     // For how to setup gradle dependencies in Android X, see:
     // https://developer.android.com/training/testing/set-up-project#gradle-dependencies
@@ -156,8 +158,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.google.firebase:firebase-firestore:18.0.0'
 
+    // On Device Machine Learnings
     implementation "com.google.android.odml:image:1.0.0-beta1"
 
+    //youtube player
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
 
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

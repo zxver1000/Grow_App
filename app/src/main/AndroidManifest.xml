@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vision_exam"
     android:installLocation="auto" >
+    <queries>
 
+        <provider android:authorities="com.google.android.gms.chimera"/>
+
+    </queries>
     <uses-sdk tools:overrideLibrary="           androidx.camera.camera2, androidx.camera.core,           androidx.camera.view, androidx.camera.lifecycle" />
 
     <uses-feature android:name="android.hardware.camera" />
@@ -25,7 +29,14 @@
         android:label="Klap-Blind"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name="Main.BadgeActivity"
+            android:exported="false" />
+        <activity
+            android:name="Main.youtube.youtubeplayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="false" />
         <activity
             android:name="Main.resultPose.ResultActivity"
             android:exported="false" />
@@ -35,6 +46,10 @@
         <activity
             android:name="Main.signup.SignUpBodyPartActivity"
             android:exported="false" />
+        <activity android:name="Main.home.SubActivity01"
+            android:exported="false"/>
+        <activity android:name="Main.home.SubActivity02"
+            android:exported="false"/>
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -52,6 +67,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="Main.signup.SignUpProfileActivity"
             android:exported="true" />
@@ -109,6 +125,8 @@
         <activity
             android:name=".preference.SettingsActivity"
             android:exported="false" />
+
+
     </application>
 
 </manifest>

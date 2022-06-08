@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.mlkit:text-recognition-devanagari:16.0.0-beta4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dd77e2fd09a1ca6910d04c4c7fbfef51/transformed/text-recognition-devanagari-16.0.0-beta4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dd77e2fd09a1ca6910d04c4c7fbfef51/transformed/text-recognition-devanagari-16.0.0-beta4/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dd77e2fd09a1ca6910d04c4c7fbfef51/transformed/text-recognition-devanagari-16.0.0-beta4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8064d8cd7c86f370022266570989ce86/transformed/text-recognition-devanagari-16.0.0-beta4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8064d8cd7c86f370022266570989ce86/transformed/text-recognition-devanagari-16.0.0-beta4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8064d8cd7c86f370022266570989ce86/transformed/text-recognition-devanagari-16.0.0-beta4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/text-recognition-devanagari/16.0.0-beta4/8dd722cd23366ae2b634592e549e0ec8ddb7870a/text-recognition-devanagari-16.0.0-beta4-javadoc.jar!/" />

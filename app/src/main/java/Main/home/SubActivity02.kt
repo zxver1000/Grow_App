@@ -12,7 +12,7 @@ class SubActivity02 : AppCompatActivity() {
     lateinit var adapter: ArrayAdapter<String>
     //arrayOf는 수정불가 mutable은 가능능
     val exercise = mutableListOf<String>( //정보 8개만 넣기
-        "팔굽혀펴기", "버피테스트", "윗몸일으키기", "팔벌려뛰기", "크런치", "마운틴 클라이머", "레그시저스", "런지"
+        "push-up", "buffy test", "sit-up", "jumping jacks", "crunch", "mountain climber", "leg scissors", "lunge"
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,7 @@ class SubActivity02 : AppCompatActivity() {
         autoCompleteTextView.setOnItemClickListener{adapterView, view, i, l ->
             //i 포지션 정보
             val item = adapterView.getItemAtPosition(i).toString()
-            Toast.makeText(this, "검색 완료", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Finished Searching", Toast.LENGTH_SHORT).show()
         }
 
         val button = findViewById<Button>(R.id.button)
@@ -56,69 +56,67 @@ class SubActivity02 : AppCompatActivity() {
             //그러면 어댑터에 연결되어있는 리스트에 자동으로 추가됨
             //adapter.notifyDataSetChanged() //이걸 꼭 호출해야 갱신이 됨
             when{
-                exname=="팔굽혀펴기"->{
-                    exnameblank.setText("팔굽혀펴기")
-                    exkcal.setText("10분당 42kcal")
-                    exdetail.setText("대표적인 근력 운동\n" +
-                            "일반적으로 기구 등을 사용하지 않고 할 수 있는 운동으로, 엎드린 상태에서 전신의 체중을 두 손과 두 발가락의 4개소에 집중하여 양팔을 늘리는 힘에 의해 신체를 올린다. 동작과 팔꿈치 관절을 굽혀 몸을 지상에 붙지 않을 정도까지 낮추고, 반복하는 것이 기본적인 방법이다. ")
+                exname=="push-up"->{
+                    exnameblank.setText("push-up")
+                    exkcal.setText("42 kcal per 10 minutes")
+                    exdetail.setText("Representative muscle exercise\n\n" +
+                            "In general, it is an exercise that can be done without using a device, and the body is raised by the force of stretching both arms by focusing the whole body's weight on four points of two hands and two toes while lying down. The basic method is to bend the movement and elbow joint to lower the body to the point where it does not stick to the ground, and repeat it. ")
                     eximage.setImageResource(R.drawable.ex01)
                 }
-                exname=="런지"->{
-                    exnameblank.setText("런지")
-                    exkcal.setText("10분당 60kcal")
-                    exdetail.setText("허벅지와 엉덩이에 탄력을 주며 하체 근력을 강화하는 운동\n" +
-                            "두 발을 골반너비로 벌리고 허리에 손을 대고 바로 선다. 오른발을 앞으로 70~100cm 정도 벌려 내밀고, 왼발의 뒤꿈치를 세운다. 등과 허리를 똑바로 편 상태에서 오른쪽 무릎을 90도로 구부리고 왼쪽 무릎은 바닥에 닿는 느낌으로 몸을 내리고 하체의 힘을 이용해 천천히 처음 자세로 돌아온다")
+                exname=="lunge"->{
+                    exnameblank.setText("lunge")
+                    exkcal.setText("60 kcal per 10 minutes")
+                    exdetail.setText("Exercise that strengthens the lower body muscles and gives elasticity to the thighs and hips\n" +
+                            "Spread your feet pelvis width apart, put your hands on your waist, and stand right away. Spread your right foot forward about 70-100cm, and raise the heel of your left foot. With your back and waist straight, bend your right knee 90 degrees, and your left knee feels like touching the floor, lower your body, and slowly return to your first position using the strength of your lower body")
                     eximage.setImageResource(R.drawable.ex02lunge)
                 }
-                exname=="팔벌려뛰기"->{
-                    exnameblank.setText("팔벌려뛰기")
-                    exkcal.setText("10분당 80kcal")
-                    exdetail.setText("전신 유산소성 근력 운동\n" +
-                            "차렷 자세를 취하고 두 팔을 양옆으로 올리면서 점프해 벌린다. 다시 차렷 자세로 돌아가고 두 발을 접프해서 벌리면서 두 손은 머리 위로 올려 박수를 친다. 다시 차렷 자세로 돌아간다.")
+                exname=="jumping jacks"->{
+                    exnameblank.setText("jumping jacks")
+                    exkcal.setText("80 kcal per 10 minutes")
+                    exdetail.setText("systemic aerobic exercise\n" +
+                            "Stand at attention and jump while raising both arms to both sides. Return to the attention position and fold and spread your feet, and put your hands on your head and clap. Return to attention position.")
                     eximage.setImageResource(R.drawable.ex03jump)
                 }
-                exname=="버피테스트"->{
-                    exnameblank.setText("버피테스트")
-                    exkcal.setText("10분당 300kcal")
-                    exdetail.setText("선 자세로 시작한다.\n" +
-                            "스쿼트 자세로 몸을 굽혀 바닥을 짚고 다리를 뒤로 쭉 펴서 엎드려뻗친 자세를 취하고 다시 다리를 당겨서 스쿼트 자세로 돌아가서 일어선다.")
+                exname=="buffy test"->{
+                    exnameblank.setText("buffy test")
+                    exkcal.setText("300 kcal per 10 minutes")
+                    exdetail.setText("Start in a standing position.\n" +
+                            "Bend in a squat position, hold the floor, stretch your legs back, lie down, and stretch your legs, pull your legs back, and return to the squat position and stand up.")
                     eximage.setImageResource(R.drawable.ex04buf)
                 }
-                exname=="윗몸일으키기"->{
-                    exnameblank.setText("윗몸일으키기")
-                    exkcal.setText("10분당 84kcal")
-                    exdetail.setText("누운 상태에서 양 손을 머리뒤에 깍지를 낀 상태로 다리는 고정시키고 상체를 앞으로 굽혔다가 팔꿈치가 무릎을 닿고 다시 내려가는 것을 반복하는 운동이다.\n" +
-                            "허리를 비롯해 신체 전반적인 지구력을 키우는 데 효과적이다.")
+                exname=="sit-up"->{
+                    exnameblank.setText("sit-up")
+                    exkcal.setText("84 calories per 10 minutes")
+                    exdetail.setText("It is an exercise in which both hands are locked behind the head while lying down, legs are fixed, the upper body is bent forward, and the elbow touches the knee and goes down again.\n" +
+                            "It is effective in developing endurance for the entire body, including the waist.")
 
                     eximage.setImageResource(R.drawable.ex05situp)
                 }
-                exname=="크런치"->{
-                    exnameblank.setText("크런치")
-                    exkcal.setText("10분당 80kcal")
-                    exdetail.setText("복직근 중 상부를 강화하는 운동\n" +
-                            "바닥에 누워 무릎을 구부리고 발이 바닥과 떨어지지 않도록 한다. 양손을 귀에 대고 복부에 힘을 주면서 고개를 살짝 들고 등을 둥글게 구부리면서 상복부를 수축한다. 상복부의 긴장을 느끼면서 천천히 몸통을 바닥으로 눕힌다.")
-
+                exname=="crunch"->{
+                    exnameblank.setText("crunch")
+                    exkcal.setText("80 per 10 minutes kcal")
+                    exdetail.setText("exercises to strengthen the upper part of the abdominal muscles\n\n" +
+                            "Lie on the floor, bend your knees, and keep your feet from falling off the floor. Put both hands on the ears and apply force to the abdomen, slightly raise the head, and bend the back in a round shape to contract the upper abdomen. Slowly lay the torso on the floor, feeling the tension in the upper abdomen")
                     eximage.setImageResource(R.drawable.ex06crunch)
                 }
-                exname=="마운틴 클라이머"->{
-                    exnameblank.setText("마운틴 클라이머")
-                    exkcal.setText("10분당 100kcal")
-                    exdetail.setText("전신근력을 길러주며 신체의 균형을 잡아주는 운동\n" +
-                            "유산소 운동인 동시에 근력 운동이기에 심박수를 빠르게 증가시켜 주어 심폐지구력 강화에 도움을 준다.\n" +
-                            "체지방 제거 및 유연성 향상에 효과가 있다.")
+                exname=="mountain climber"->{
+                    exnameblank.setText("mountain climber")
+                    exkcal.setText("100 kcal per 10 minutes")
+                    exdetail.setText("Exercise that helps build muscle strength and balances the body\n" +
+                            "Since it is an aerobic exercise and a muscle exercise, it increases the heart rate quickly to help strengthen cardiopulmonary endurance.")
 
                     eximage.setImageResource(R.drawable.ex07mountain)
                 }
-                exname=="레그시저스"->{
-                    exnameblank.setText("레그시저스")
-                    exkcal.setText("10분당 60kcal")
-                    exdetail.setText("허벅지와 엉덩이에 탄력을 주며 하체 근력을 강화하는 운동\n" +
-                            "두 발을 골반너비로 벌리고 허리에 손을 대고 바로 선다. 오른발을 앞으로 70~100cm 정도 벌려 내밀고, 왼발의 뒤꿈치를 세운다. 등과 허리를 똑바로 편 상태에서 오른쪽 무릎을 90도로 구부리고 왼쪽 무릎은 바닥에 닿는 느낌으로 몸을 내리고 하체의 힘을 이용해 천천히 처음 자세로 돌아온다.")
+                exname=="leg scissors"->{
+                    exnameblank.setText("leg scissors")
+                    exkcal.setText("60 kcal per 10 minutes")
+                    exdetail.setText("Exercise that strengthens the lower body muscles and gives elasticity to the thighs and hips\n" +
+                            "Spread your feet pelvis width apart, put your hands on your waist, and stand right away. Spread your right foot forward about 70-100cm, and raise the heel of your left foot. With your back and waist straight, bend your right knee to 90 degrees, and your left knee lowers your body with the feeling of touching the floor, and slowly returns to your first position using the strength of your lower body.")
 
                     eximage.setImageResource(R.drawable.ex08legs)
                 }
                 else->{
-                    exnameblank.setText("해당 운동에 대한 정보는 없습니다")
+                    exnameblank.setText("There is no information about the exercise")
                     exkcal.setText("")
                     exdetail.setText("")
                     eximage.setImageResource(R.drawable.else01)
