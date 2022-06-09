@@ -165,11 +165,5 @@ dependencies {
     //coroutine
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
-    implementation 'androidx.core:core-ktx:1.7.0'
 
-}
-configurations {
-    // Resolves dependency conflict caused by some dependencies use
-    // com.google.guava:guava and com.google.guava:listenablefuture together.
-    all*.exclude group: 'com.google.guava', module: 'listenablefuture'
 }

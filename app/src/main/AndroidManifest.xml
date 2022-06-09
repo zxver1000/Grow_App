@@ -55,7 +55,10 @@
 
         <activity
             android:name="Main.signup.splashActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+
+
+        </activity>
         <activity
             android:name="Main.signup.SignUpProfileActivity"
             android:exported="true" />
