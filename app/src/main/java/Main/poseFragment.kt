@@ -51,21 +51,21 @@ class poseFragment : Fragment() {
                 R.drawable.squat,
                 R.drawable.ic_launcher_background,
                 "SQUAT",
-                "add strength") )
+                "Add strength") )
             else if(i%3==1)
             {
                 items.add(ItemCard(
                     R.drawable.push_up,
                     R.drawable.ic_launcher_background,
                     "PUSH_UP $i",
-                    "하하") )
+                    "Add strength") )
             }
             else if(i%3==2)
             {    items.add(ItemCard(
                 R.drawable.pull_up,
                 R.drawable.ic_launcher_background,
                 "PULL_UP $i",
-                "호호") )
+                "Add strength") )
 
             }
         }

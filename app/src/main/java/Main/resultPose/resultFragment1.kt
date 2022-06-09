@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.vision_exam.R
 import com.github.mikephil.charting.charts.BarChart
@@ -32,12 +33,43 @@ class resultFragment1 : Fragment() {
 
         val entries = ArrayList<BarEntry>()
         var index=1.2f
+        var counting=0f
+        var high=1f
+        var low=111111111111111f
+        var average=0f
+
+
+        entries.add(BarEntry(index,90.3f))
+        index+=1.0f
         for(z in PoseGraphic.z_array)
         {
             entries.add(BarEntry(index,z.toFloat()))
             index+=1.0f
+            average+=z.toFloat()
+            counting+=1.0f
+            if(high<z.toFloat())
+                high=z.toFloat()
+
+            if(low>z.toFloat())
+                low=z.toFloat()
+
         }
+
         PoseGraphic.z_array.clear()
+     var average_text=root.findViewById<TextView>(R.id.average_accuracy)
+        var high_text=root.findViewById<TextView>(R.id.high_accuracy)
+        var low_text=root.findViewById<TextView>(R.id.low_accuracy)
+        var total_text=root.findViewById<TextView>(R.id.count)
+
+
+
+        average_text.text=(average/counting).toString()
+        counting+=1.0f
+        high_text.text=high.toString()
+        low_text.text=low.toString()
+        total_text.text=counting.toString()
+
+
 
 
 
