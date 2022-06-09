@@ -10,5 +10,6 @@ data class CalendarInfo(
     val month: Int,
     val day: Int,
     var trainingProgress: String = "",
-    var trainingDiary: String = ""
+    var trainingDiary: String = "",
+    var minute:Int=0
 ): Serializable

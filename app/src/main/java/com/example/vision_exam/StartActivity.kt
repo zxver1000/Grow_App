@@ -20,6 +20,15 @@ import com.google.firebase.firestore.FirebaseFirestore
 import java.util.ArrayList
 
 
+class d
+{
+    private var name=2;
+    constructor(name:Int)
+    {
+        this.name=name
+    }
+}
+
 class StartActivity : AppCompatActivity() {
 
 
@@ -34,30 +43,19 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
+        /*
         Log.d("","시작")
         var store= FirebaseFirestore.getInstance()
 
-        /*
-       var s= store.collection("회원정보").document("test10").get().addOnSuccessListener {
-           result->
-        //   Log.d("", "${result["level"]} 끝")
-       }
-*/
-        store.collection("회원정보").get()
-            .addOnSuccessListener { task ->
-                for (doc in task) {
-                   // Log.d("", "${doc["level"]} 중")
-                    if (doc["level"] == "senior") {
-                        Log.d("", "${doc["name"]} 중간인사람")
-                    }
-                }
-            }
-        val email = intent.getStringExtra("EMAIL3")
-        if (email != null) {
-            Log.d("TEST4",email)
-        }
+        store.collection("종강").get().addOnSuccessListener {
 
-        /*
+                task->
+            for (doc in task)
+            {
+                Log.d("", "${doc} 끝")
+            }
+
+        }
         val user = hashMapOf(
             "first" to "Alan",
             "middle" to "Mathison",
@@ -65,19 +63,12 @@ class StartActivity : AppCompatActivity() {
             "born" to 1912
         )
         store.collection("이름").add(user)
+*/
 
-       val email = intent.getStringExtra("EMAIL3")
-        if (email != null) {
-            Log.d("TEST4",email)
+        if (!allRuntimePermissionsGranted()) {
+            getRuntimePermissions()
         }
 
-         */
-
-
-        var fagment2=homeFragment()
-        var bundle=Bundle()
-        bundle.putInt("num",1)
-        fagment2.arguments=bundle
         supportFragmentManager.beginTransaction().add(fl.id, homeFragment()).commit()
         bn.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
@@ -86,21 +77,21 @@ class StartActivity : AppCompatActivity() {
                     true
                 }
                 R.id.second->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, youtubeFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, mypageFragment()).commit()
                     true
                 }
                 R.id.third->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, boardFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, youtubeFragment()).commit()
                     true
 
                 }
                 R.id.fourth->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, poseFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, boardFragment()).commit()
                     true
                 }
 
                 else -> {
-                    supportFragmentManager.beginTransaction().replace(fl.id, mypageFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, poseFragment()).commit()
                     true
                 }
 
@@ -110,8 +101,6 @@ class StartActivity : AppCompatActivity() {
         }
 
     }
-
-
 
     private fun allRuntimePermissionsGranted(): Boolean {
         for (permission in StartActivity.REQUIRED_RUNTIME_PERMISSIONS) {

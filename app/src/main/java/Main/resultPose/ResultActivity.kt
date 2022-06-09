@@ -8,6 +8,7 @@ import android.widget.FrameLayout
 import com.example.vision_exam.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.*
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ResultActivity : AppCompatActivity() {

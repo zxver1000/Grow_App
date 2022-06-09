@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -29,14 +30,17 @@ class BoardDetailActivity : AppCompatActivity() {
     private val diaryContentEditText: EditText by lazy {
         findViewById(R.id.diary_content)
     }
-
+    private val time_content: TextView by lazy {
+        findViewById(R.id.time_content)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_board_detail)
-
         db =  BoardRoomDatabase.getDatabase(this)
+
         initIntent()
+
     }
 
     private fun initIntent() {
@@ -51,6 +55,8 @@ class BoardDetailActivity : AppCompatActivity() {
                 Log.d(TAG, "initIntent: ${trainingInfo.toString()}")
                 taskContentEditText.setText(trainingInfo.last().trainingProgress)
                 diaryContentEditText.setText(trainingInfo.last().trainingDiary)
+                time_content.setText("${trainingInfo.last().minute}분")
+                curCalendarInfo.minute=trainingInfo.last().minute
             }
         }
 
