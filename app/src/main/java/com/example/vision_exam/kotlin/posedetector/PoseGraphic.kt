@@ -19,6 +19,8 @@ package com.example.vision_exam.kotlin.posedetector
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.speech.tts.TextToSpeech
+import android.util.Log
 import com.google.common.primitives.Ints
 import com.example.vision_exam.GraphicOverlay
 import com.example.vision_exam.GraphicOverlay.Graphic
@@ -27,6 +29,9 @@ import com.google.mlkit.vision.pose.PoseLandmark
 import java.lang.Math.max
 import java.lang.Math.min
 import java.util.Locale
+
+import com.example.vision_exam.MainActivity
+import com.example.vision_exam.kotlin.LivePreviewActivity
 
 /** Draw the detected pose in preview.  */
 class PoseGraphic internal constructor(
@@ -48,8 +53,11 @@ class PoseGraphic internal constructor(
   private val acpaint:Paint
   private val acpaint2:Paint
   public var count=0
+  var tts_count="!"
   public var accuraccy=0.0
+
   init {
+
     classificationTextPaint = Paint()
     classificationTextPaint.color = Color.WHITE
     classificationTextPaint.textSize = POSE_CLASSIFICATION_TEXT_SIZE
@@ -80,7 +88,7 @@ class PoseGraphic internal constructor(
     acpaint2=Paint()
     acpaint2.color=Color.BLACK
     acpaint2.textSize=60f
-
+      //MainActivity.init_tts()
   }
 
 
@@ -94,6 +102,7 @@ class PoseGraphic internal constructor(
     // Draw pose classification text.
     val classificationX = POSE_CLASSIFICATION_TEXT_SIZE * 0.5f
     for (i in poseClassification.indices) {
+
       val classificationY = canvas.height - (
         POSE_CLASSIFICATION_TEXT_SIZE * 1.5f * (poseClassification.size - i).toFloat()
         )
@@ -102,6 +111,8 @@ class PoseGraphic internal constructor(
       print(classificationY)
       if(i==0)
       {
+
+
         canvas.drawText("count",10.0f,1790f,countpaint)
         canvas.drawRect(0f, 1800f, 200f, 2000f,rightPaint)
         canvas.drawText( poseClassification[i],67.0f,1930f,BlackPaint)
@@ -110,6 +121,20 @@ class PoseGraphic internal constructor(
           print("1111-------------------------")
           print(poseClassification[i])
           count = poseClassification[i].toInt()
+          if(LivePreviewActivity.ttscouns!=poseClassification[i].toInt())
+          {
+            if(LivePreviewActivity.ttscouns!=1) {
+
+              z_array.add(z_rkqt / public_count)
+               Log.d("", "z index ${z_array}")
+            }
+            LivePreviewActivity.ttscouns=poseClassification[i].toInt()
+            LivePreviewActivity.speak(poseClassification[i])
+            LivePreviewActivity.something=MainActivity.ttscouns
+            public_count=1.0
+            z_rkqt=0.0
+
+          }
 
         }
         }
@@ -117,14 +142,19 @@ class PoseGraphic internal constructor(
         canvas.drawText("Accuracy",830.0f,1780f,acpaint)
         canvas.drawRect(850f, 1800f, 1200f, 2000f,rightPaint)
 
+        public_count++
+
+        z_rkqt+=poseClassification[i].toDouble()
+
+        var s=poseClassification[i]+"%"
         if(poseClassification[i]=="100%") {
           acpaint.textSize=60f
-          canvas.drawText(poseClassification[i],890.0f,1900f,acpaint2)
+          canvas.drawText(s,890.0f,1900f,acpaint2)
         }
         else
         {
           acpaint.textSize=70f
-          canvas.drawText( poseClassification[i],890.0f,1900f,acpaint2)
+          canvas.drawText( s,890.0f,1900f,acpaint2)
         }
 
 
@@ -237,6 +267,7 @@ class PoseGraphic internal constructor(
         )
       }
     }
+
   }
 
   internal fun drawPoint(canvas: Canvas, landmark: PoseLandmark, paint: Paint) {
@@ -319,5 +350,12 @@ class PoseGraphic internal constructor(
 
     public var accuracy=0.0
     public var count=0
+    public var z_count=0
+    public var public_count=0.0
+    public var z_rkqt=0.0
+    public var z_array=ArrayList<Double>()
+    fun getCounts():Int{
+      return count
+    }
   }
 }

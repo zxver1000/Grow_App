@@ -38,6 +38,13 @@
       android:background="#000"
       android:orientation="horizontal">
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
+
     <ToggleButton
         android:id="@+id/facing_switch"
         android:layout_width="122dp"

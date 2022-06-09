@@ -23,6 +23,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
@@ -30,6 +31,7 @@ import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import com.example.vision_exam.*
 import com.google.android.gms.common.annotation.KeepName
 import com.google.mlkit.common.model.LocalModel
@@ -51,8 +53,9 @@ import com.google.mlkit.vision.text.japanese.JapaneseTextRecognizerOptions
 import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import java.io.IOException
-import java.util.ArrayList
 import com.example.vision_exam.kotlin.posedetector.PoseGraphic
+import java.util.*
+import kotlin.properties.Delegates
 
 /** Live preview demo for ML Kit APIs. */
 @KeepName
@@ -65,6 +68,7 @@ class LivePreviewActivity :
   private var selectedModel = POSE_DETECTION
   private  lateinit var button:Button
   private lateinit var  button2:Button
+  var sk=0
   override fun onCreate(savedInstanceState: Bundle?) {
 
 
@@ -125,22 +129,61 @@ class LivePreviewActivity :
       finish()
     }
 
+    val button4 = findViewById<Button>(R.id.button5)
+    button4.setOnClickListener {
+      Log.d("","helloworld")
+      speakto("hello world")
+    }
 
     createCameraSource(selectedModel)
-
-
-    if(PoseGraphic.count==10)
-    {
-
-      print("tentnet")
-
-      val intent = Intent(this, StartActivity::class.java)
-      startActivity(intent)
-
-    }
+    init_tts2()
 
   }
 
+  public fun init_tts2() {
+    /*
+    tts=TextToSpeech(instance, TextToSpeech.OnInitListener {
+        isTtsready = true
+        tts!!.language = Locale.ENGLISH
+        tts_active=true
+    })
+*/
+
+    tts = TextToSpeech(this, TextToSpeech.OnInitListener {
+    tts!!.language = Locale.US
+    })
+
+    /*
+    tts=TextToSpeech(this){
+        if(it==TextToSpeech.SUCCESS)
+        {
+                val result=tts?.setLanguage(Locale.ENGLISH)
+            if(result==TextToSpeech.LANG_MISSING_DATA)
+            {
+                Toast.makeText(context,"no 안됨",Toast.LENGTH_SHORT).show()
+                Log.d(TAG, "감사 안됨")
+            }
+            Toast.makeText(context,"성공스",Toast.LENGTH_SHORT).show()
+            Log.d(TAG, "감사 성공")
+        }
+        else
+        {
+            Toast.makeText(context,"us없음",Toast.LENGTH_SHORT).show()
+            Log.d(TAG, "감사 안됨")
+        }
+    }
+
+     */
+
+  }
+
+
+
+fun start_graph(){
+  val intent = Intent(this, ResultActivity::class.java)
+  startActivity(intent)
+  finish()
+}
   fun btn_set(){
     button=findViewById(R.id.stop_button)
     button2=findViewById(R.id.stop_btn2)
@@ -470,6 +513,42 @@ class LivePreviewActivity :
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.READ_EXTERNAL_STORAGE
       )
+
+
+    public var tts:TextToSpeech?=null
+    var ttscouns=0
+    var s= arrayOf("one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen")
+    public fun speak(str:String){
+      if(str!="") {
+
+        tts?.speak(s[str.toInt()-1], TextToSpeech.QUEUE_ADD, null, null)
+        tts?.playSilentUtterance(1000, TextToSpeech.QUEUE_ADD,null)
+        Log.d("", "${s[str.toInt()]} 중간인사람")
+      }
+    }
+    public fun speakto(str:String){
+      if(str!="") {
+        tts?.speak(str, TextToSpeech.QUEUE_ADD, null, null)
+        //tts?.speak(s[str.toInt()], TextToSpeech.QUEUE_ADD, null, null)
+        tts?.playSilentUtterance(1000,TextToSpeech.QUEUE_ADD,null)
+
+      }
+    }
+
+
+
+    var something:Int by Delegates.observable(1){props,old,new->
+
+
+      Log.d("", "${old} 올드")
+      Log.d("", "${new} 올드 뉴뉴")
+
+   if(new==5)
+   {
+
+   }
+
+    }
   }
 
 

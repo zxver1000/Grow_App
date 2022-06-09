@@ -1,12 +1,14 @@
 package com.example.vision_exam
 
 import android.Manifest
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build.VERSION
 import android.os.Build.VERSION_CODES
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.LayoutInflater
@@ -20,17 +22,35 @@ import com.example.vision_exam.kotlin.CameraXLivePreviewActivity
 import com.example.vision_exam.kotlin.CameraXSourceDemoActivity
 import com.example.vision_exam.kotlin.LivePreviewActivity
 import com.example.vision_exam.kotlin.StillImageActivity
-import java.util.ArrayList
+import com.github.mikephil.charting.utils.Utils.init
+import com.squareup.okhttp.internal.Internal.instance
+import org.w3c.dom.Text
+import java.util.*
 
 /** Demo app chooser which allows you pick from all available testing Activities. */
+
+
 class MainActivity :
-    AppCompatActivity(), ActivityCompat.OnRequestPermissionsResultCallback, OnItemClickListener {
+
+    AppCompatActivity(),ActivityCompat.OnRequestPermissionsResultCallback, OnItemClickListener {
+
+
+  lateinit var context:Context
+
+
+
+  init {
+context=this
+  }
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
         setContentView(R.layout.activity_chooser)
         //tt
+  init_tts2()
 
+        speak("123")
         // Set up ListView and Adapter
         val listView = findViewById<ListView>(R.id.test_activity_list_view)
         val adapter = MyArrayAdapter(this, android.R.layout.simple_list_item_2, CLASSES)
@@ -41,12 +61,49 @@ class MainActivity :
             getRuntimePermissions()
         }
 
-        val button = findViewById<Button>(R.id.button)
+        val button = findViewById<Button>(R.id.button5)
 
-
+        button.setOnClickListener {
+            speak("hello world")
+        }
 
     }
 
+   public fun init_tts2() {
+       /*
+       tts=TextToSpeech(instance, TextToSpeech.OnInitListener {
+           isTtsready = true
+           tts!!.language = Locale.ENGLISH
+           tts_active=true
+       })
+ */
+
+       /*
+       tts=TextToSpeech(this){
+           if(it==TextToSpeech.SUCCESS)
+           {
+                   val result=tts?.setLanguage(Locale.ENGLISH)
+               if(result==TextToSpeech.LANG_MISSING_DATA)
+               {
+                   Toast.makeText(context,"no 안됨",Toast.LENGTH_SHORT).show()
+                   Log.d(TAG, "감사 안됨")
+               }
+               Toast.makeText(context,"성공스",Toast.LENGTH_SHORT).show()
+               Log.d(TAG, "감사 성공")
+           }
+           else
+           {
+               Toast.makeText(context,"us없음",Toast.LENGTH_SHORT).show()
+               Log.d(TAG, "감사 안됨")
+           }
+       }
+
+        */
+
+   }
+    public fun speak(str:String){
+        tts?.speak(str,TextToSpeech.QUEUE_ADD,null,null)
+    }
 
     private fun allRuntimePermissionsGranted(): Boolean {
         for (permission in REQUIRED_RUNTIME_PERMISSIONS) {
@@ -129,6 +186,12 @@ class MainActivity :
 
     companion object {
         private const val TAG = "ChooserActivity"
+        public var tts:TextToSpeech?=null
+        var isTtsready=false
+        var tts_active=false
+        var ttscouns=0
+         var instance=MainActivity().context
+        var s= arrayOf("one","two","three","four","five","six","seven","eight","nine","ten")
         private val CLASSES =
             if (VERSION.SDK_INT < VERSION_CODES.LOLLIPOP)
                 arrayOf<Class<*>>(
@@ -164,5 +227,52 @@ class MainActivity :
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE
             )
+
+        public fun start_tts(str:String){
+            speak(str)
+        }
+        public fun init_tts() {
+                tts=TextToSpeech(instance, TextToSpeech.OnInitListener {
+                    isTtsready = true
+                    tts!!.language = Locale.US
+                    tts_active=true
+                })
+
+        }
+
+        public fun speak(str:String){
+            if(str!="") {
+
+                tts?.speak(s[str.toInt()-1], TextToSpeech.QUEUE_ADD, null, null)
+                tts?.playSilentUtterance(1000,TextToSpeech.QUEUE_ADD,null)
+                Log.d("", "${s[str.toInt()]} 중간인사람")
+            }
+        }
+
+
+
+
+    public fun speakto(str:String){
+        if(str!="") {
+            tts?.speak(str, TextToSpeech.QUEUE_ADD, null, null)
+            //tts?.speak(s[str.toInt()], TextToSpeech.QUEUE_ADD, null, null)
+            tts?.playSilentUtterance(1000,TextToSpeech.QUEUE_ADD,null)
+
+        }
+    }
+    }
+
+
+
+
+    override fun onStop() {
+        super.onStop()
+        tts!!.stop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        tts!!.shutdown()
     }
 }
+

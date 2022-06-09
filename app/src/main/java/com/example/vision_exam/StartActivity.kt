@@ -34,20 +34,26 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-
-
         Log.d("","시작")
         var store= FirebaseFirestore.getInstance()
 
-        store.collection("종강").get().addOnSuccessListener {
-
-                task->
-            for (doc in task)
-            {
-                Log.d("", "${doc} 끝")
+        /*
+       var s= store.collection("회원정보").document("test10").get().addOnSuccessListener {
+           result->
+        //   Log.d("", "${result["level"]} 끝")
+       }
+*/
+        store.collection("회원정보").get()
+            .addOnSuccessListener { task ->
+                for (doc in task) {
+                   // Log.d("", "${doc["level"]} 중")
+                    if (doc["level"] == "senior") {
+                        Log.d("", "${doc["name"]} 중간인사람")
+                    }
+                }
             }
 
-        }
+        /*
         val user = hashMapOf(
             "first" to "Alan",
             "middle" to "Mathison",
@@ -57,11 +63,18 @@ class StartActivity : AppCompatActivity() {
         store.collection("이름").add(user)
 
 
+         */
+
+
+        var fagment2=homeFragment()
+        var bundle=Bundle()
+        bundle.putInt("num",1)
+        fagment2.arguments=bundle
         supportFragmentManager.beginTransaction().add(fl.id, homeFragment()).commit()
         bn.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
                 R.id.first->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, homeFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, fagment2).commit()
                     true
                 }
                 R.id.second->{

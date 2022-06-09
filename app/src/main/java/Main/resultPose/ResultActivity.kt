@@ -25,8 +25,6 @@ class ResultActivity : AppCompatActivity() {
 
         //database = FirebaseDatabase.getInstance("종강").reference
 
-
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
         supportFragmentManager.beginTransaction().add(fl.id, resultFragment1()).commit()

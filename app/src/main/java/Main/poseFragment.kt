@@ -48,8 +48,8 @@ class poseFragment : Fragment() {
             items.add(ItemCard(
                 R.drawable.squat,
                 R.drawable.ic_launcher_background,
-                "SQUAT $i",
-                "룰루") )
+                "SQUAT",
+                "add strength") )
             else if(i%3==1)
             {
                 items.add(ItemCard(

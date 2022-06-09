@@ -16,7 +16,7 @@ import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
-
+import com.example.vision_exam.kotlin.posedetector.PoseGraphic
 class resultFragment1 : Fragment() {
 
     override fun onCreateView(
@@ -31,13 +31,14 @@ class resultFragment1 : Fragment() {
         val barChart:BarChart=root.findViewById(R.id.barChart)
 
         val entries = ArrayList<BarEntry>()
-        entries.add(BarEntry(1.2f,20.0f))
-        entries.add(BarEntry(2.2f,70.0f))
-        entries.add(BarEntry(3.2f,30.0f))
-        entries.add(BarEntry(4.2f,90.0f))
-        entries.add(BarEntry(5.2f,70.0f))
-        entries.add(BarEntry(6.2f,30.0f))
-        entries.add(BarEntry(7.2f,90.0f))
+        var index=1.2f
+        for(z in PoseGraphic.z_array)
+        {
+            entries.add(BarEntry(index,z.toFloat()))
+            index+=1.0f
+        }
+        PoseGraphic.z_array.clear()
+
 
 
         barChart.run {
@@ -74,7 +75,7 @@ class resultFragment1 : Fragment() {
         }
 
         var set = BarDataSet(entries,"DataSet") // 데이터셋 초기화
-        set.color = ContextCompat.getColor(context!!,R.color.blue) // 바 그래프 색 설정
+        set.color = ContextCompat.getColor(context!!,R.color.white) // 바 그래프 색 설정
         val dataSet :ArrayList<IBarDataSet> = ArrayList()
 
         dataSet.add(set)

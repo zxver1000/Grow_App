@@ -41,7 +41,7 @@ class MyRecyclerView(items: ArrayList<ItemCard>) : RecyclerView.Adapter<MyRecycl
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(position)
         var button: Button =holder.itemView.findViewById(R.id.button)
-        val item=arrayOf("8","10","12","15","20")
+        val item=arrayOf("8","10","12","15","20","Passive")
         var selecitem:String?=null
         button.setOnClickListener{
 
