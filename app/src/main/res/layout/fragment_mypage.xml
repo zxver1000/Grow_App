@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
-            android:text="마이페이지"
+            android:text="MyPage"
             android:textColor="@color/black"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -116,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:padding="5dp"
-                android:text="뱃지"
+                android:text="Badge"
                 android:textColor="@color/black"
                 android:textSize="24dp"
                 android:textStyle="bold" />

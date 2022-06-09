@@ -26,7 +26,7 @@
         android:bufferType="spannable"
         android:gravity="center"
         android:layout_marginTop="30dp"
-        android:text="2. 운동하고 싶은 \n부위를 선택해주세요"
+        android:text="2. Please choose \n the body part \n you want to work out"
         android:textColor="#0C0C0C"
         android:textSize="30dp"
         android:textStyle="bold" />
@@ -42,7 +42,7 @@
         android:background="@drawable/custom_checkbox"
         android:button="@android:color/transparent"
         android:paddingLeft="10dp"
-        android:text="허벅지"
+        android:text="Thigh"
         android:textColor="#0C0C0C"
         android:textSize="18dp" />
 
@@ -55,7 +55,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="배"
+        android:text="Belly"
         android:paddingLeft="10dp"
         android:textColor="#0C0C0C"
         android:textSize="18dp" />
@@ -68,7 +68,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="옆구리"
+        android:text="Side"
         android:paddingLeft="10dp"
         android:textColor="#0C0C0C"
         android:textSize="18dp" />
@@ -81,7 +81,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="팔"
+        android:text="Arm"
         android:paddingLeft="10dp"
         android:textColor="#0C0C0C"
         android:textSize="18dp" />
@@ -94,7 +94,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="등"
+        android:text="Back"
         android:paddingLeft="10dp"
         android:textColor="#0C0C0C"
         android:textSize="18dp" />
@@ -107,7 +107,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="종아리"
+        android:text="Calf"
         android:paddingLeft="10dp"
         android:textColor="#0C0C0C"
         android:textSize="18dp" />
@@ -120,7 +120,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="어깨"
+        android:text="Shoulder"
         android:paddingLeft="10dp"
         android:textColor="#0C0C0C"
         android:textSize="18dp" />
@@ -133,7 +133,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="가슴"
+        android:text="Chest"
         android:paddingLeft="10dp"
         android:textColor="#0C0C0C"
         android:textSize="18dp" />

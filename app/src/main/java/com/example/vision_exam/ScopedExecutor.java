@@ -20,10 +20,7 @@ import androidx.annotation.NonNull;
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/**
- * Wraps an existing executor to provide a {@link #shutdown} method that allows subsequent
- * cancellation of submitted runnables.
- */
+
 public class ScopedExecutor implements Executor {
 
   private final Executor executor;

@@ -52,6 +52,10 @@ class StartActivity : AppCompatActivity() {
                     }
                 }
             }
+        val email = intent.getStringExtra("EMAIL3")
+        if (email != null) {
+            Log.d("TEST4",email)
+        }
 
         /*
         val user = hashMapOf(
@@ -62,6 +66,10 @@ class StartActivity : AppCompatActivity() {
         )
         store.collection("이름").add(user)
 
+       val email = intent.getStringExtra("EMAIL3")
+        if (email != null) {
+            Log.d("TEST4",email)
+        }
 
          */
 
@@ -74,7 +82,7 @@ class StartActivity : AppCompatActivity() {
         bn.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
                 R.id.first->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, fagment2).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, homeFragment()).commit()
                     true
                 }
                 R.id.second->{

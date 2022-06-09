@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import com.example.vision_exam.R
@@ -28,7 +29,7 @@ class SignUpLevelActivity : AppCompatActivity() {
         val textData:String = title.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorSpan = ForegroundColorSpan(Color.parseColor("#6842FF"))
-        builder.setSpan(colorSpan,7,12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        builder.setSpan(colorSpan,22,36, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         title.text = builder
 
         val basicButton = findViewById<Button>(R.id.signup_level_basic)
@@ -47,11 +48,16 @@ class SignUpLevelActivity : AppCompatActivity() {
             seniButton?.isSelected = seniButton?.isSelected != true
         }
 
-
+        val email = intent.getStringExtra("EMAIL2")
+        if (email != null) {
+            Log.d("TEST3",email)
+        }
         val C_button = findViewById<Button>(R.id.signup_level_continueButton)
         val B_button = findViewById<Button>(R.id.signup_level_skipButton)
         C_button.setOnClickListener {
+
             val intent = Intent(this,StartActivity::class.java)
+            intent.putExtra("EMAIL3",email)
             startActivity(intent)
         }
         B_button.setOnClickListener {

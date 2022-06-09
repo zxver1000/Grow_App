@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/first" app:showAsAction="ifRoom" android:enabled="true"
-        android:icon="@drawable/bnv_home" android:title="홈" />
+        android:icon="@drawable/bnv_home" android:title="Home" />
     <item android:id="@+id/second" app:showAsAction="ifRoom"
-        android:icon="@drawable/bnv_youtube" android:title="유튜브 추천" />
+        android:icon="@drawable/bnv_youtube" android:title="Youtube" />
     <item android:id="@+id/third" app:showAsAction="ifRoom"
-        android:enabled="true" android:icon="@drawable/bnv_calender2" android:title="캘린더" />
+        android:enabled="true" android:icon="@drawable/bnv_calender2" android:title="Calender" />
     <item android:id="@+id/fourth" app:showAsAction="ifRoom"
-        android:enabled="true" android:icon="@drawable/bnv_pose" android:title="자세교정" />
+        android:enabled="true" android:icon="@drawable/bnv_pose" android:title="Posture" />
     <item android:id="@+id/fifth" app:showAsAction="ifRoom"
-        android:enabled="true" android:icon="@drawable/bnv_mypage" android:title="마이페이지" />
+        android:enabled="true" android:icon="@drawable/bnv_mypage" android:title="Mypage" />
 </menu>

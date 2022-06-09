@@ -30,6 +30,10 @@
             android:name="Main.BadgeActivity"
             android:exported="false" />
         <activity
+            android:name="Main.youtube.youtubeplayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="false" />
+        <activity
             android:name="Main.resultPose.ResultActivity"
             android:exported="false" />
         <activity
