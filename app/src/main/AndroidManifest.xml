@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vision_exam"
-    android:installLocation="auto">
+    android:installLocation="auto" >
+    <queries>
 
+        <provider android:authorities="com.google.android.gms.chimera"/>
+
+    </queries>
     <uses-sdk tools:overrideLibrary="           androidx.camera.camera2, androidx.camera.core,           androidx.camera.view, androidx.camera.lifecycle" />
 
     <uses-feature android:name="android.hardware.camera" />
@@ -20,12 +24,16 @@
     </queries>
 
     <application
+        android:name="Main.signup.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Klap-Blind"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name="Main.signup.SignUpFormActivity"
+            android:exported="false" />
         <activity
             android:name="Main.BadgeActivity"
             android:exported="false" />
@@ -45,6 +53,10 @@
         <activity
             android:name="Main.signup.SignUpBodyPartActivity"
             android:exported="false" />
+        <activity android:name="Main.home.SubActivity01"
+            android:exported="false"/>
+        <activity android:name="Main.home.SubActivity02"
+            android:exported="false"/>
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -62,6 +74,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="Main.signup.SignUpProfileActivity"
             android:exported="true" />
@@ -93,6 +106,30 @@
             android:name=".kotlin.StillImageActivity"
             android:exported="false"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".preference.SettingsActivity"
+            android:exported="false" />
+
+
+            android:name="com.example.vision_exam.kotlin.ChooserActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.vision_exam.kotlin.LivePreviewActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.vision_exam.kotlin.CameraXLivePreviewActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.vision_exam.kotlin.CameraXSourceDemoActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.vision_exam.kotlin.StillImageActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
         <activity
             android:name=".preference.SettingsActivity"
             android:exported="false" />

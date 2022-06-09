@@ -3,6 +3,7 @@ package com.example.vision_exam
 import Main.*
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -20,15 +21,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import java.util.ArrayList
 
 
-class d
-{
-    private var name=2;
-    constructor(name:Int)
-    {
-        this.name=name
-    }
-}
-
 class StartActivity : AppCompatActivity() {
 
 
@@ -43,45 +35,47 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        /*
-        Log.d("","시작")
-        var store= FirebaseFirestore.getInstance()
-
-        store.collection("종강").get().addOnSuccessListener {
-
-                task->
-            for (doc in task)
-            {
-                Log.d("", "${doc} 끝")
-            }
-
+       val email = intent.getStringExtra("EMAIL4")
+        if (email != null) {
+            Log.d("TEST4",email)
         }
-        val user = hashMapOf(
-            "first" to "Alan",
-            "middle" to "Mathison",
-            "last" to "Turing",
-            "born" to 1912
-        )
-        store.collection("이름").add(user)
-*/
+        val name = intent.getStringExtra("NAME4")!!
+        val nickName = intent.getStringExtra("NICKNAME4")!!
+        val firstAccessDate = intent.getStringExtra("FIRSTACCESSDATE4")!!
+        val bodypart = intent.getStringExtra("BODYPART4")!!
+        val level = intent.getStringExtra("LEVEL4")!!
+        val shape = intent.getStringExtra("SHAPE4")!!
+        Log.d("","${email} 이거 맞나요2?")
 
-        if (!allRuntimePermissionsGranted()) {
-            getRuntimePermissions()
-        }
 
-        supportFragmentManager.beginTransaction().add(fl.id, homeFragment()).commit()
+        var fragment2=homeFragment()
+        var bundle = Bundle()
+        bundle.putString("email",email)
+        bundle.putString("name",name)
+        bundle.putString("nickName",nickName)
+        bundle.putString("bodypart",bodypart)
+        bundle.putString("level",level)
+        bundle.putString("date",firstAccessDate)
+        bundle.putString("shape",shape)
+        fragment2.arguments=bundle
+
+        supportFragmentManager.beginTransaction().add(fl.id,fragment2).commit()
         bn.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
                 R.id.first->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, homeFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id,fragment2).commit()
                     true
                 }
                 R.id.second->{
-                    supportFragmentManager.beginTransaction().replace(fl.id, youtubeFragment()).commit()
+                    val bundle = Bundle()
+                    bundle.putString("EMAIL4",email)
+                    val youTubeFragment = youtubeFragment()
+                    youTubeFragment.arguments = bundle
+                    supportFragmentManager.beginTransaction().replace(fl.id, youTubeFragment).commit()
                     true
                 }
                 R.id.third->{
-                    supportFragmentManager.beginTransaction().replace(fl.id,boardFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(fl.id, boardFragment()).commit()
                     true
 
                 }
@@ -91,7 +85,11 @@ class StartActivity : AppCompatActivity() {
                 }
 
                 else -> {
-                    supportFragmentManager.beginTransaction().replace(fl.id, mypageFragment()).commit()
+                    val bundle = Bundle()
+                    bundle.putString("EMAIL4",email)
+                    val myPageFragment = mypageFragment()
+                    myPageFragment.arguments = bundle
+                    supportFragmentManager.beginTransaction().add(fl.id, myPageFragment).commit()
                     true
                 }
 
@@ -141,8 +139,6 @@ class StartActivity : AppCompatActivity() {
         Log.i(StartActivity.TAG, "Permission NOT granted: $permission")
         return false
     }
-
-
 
     companion object {
         private const val TAG = "ChooserActivity"

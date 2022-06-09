@@ -12,11 +12,13 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.vision_exam.R
 import com.example.vision_exam.StartActivity
+import com.google.firebase.firestore.FirebaseFirestore
 
 /*
    사용자 회원가입 - 3. 운동 레벨 선택 화면
  */
 class SignUpLevelActivity : AppCompatActivity() {
+    var firebaseStore = FirebaseFirestore.getInstance() //firebase 연동
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_level)
@@ -48,16 +50,54 @@ class SignUpLevelActivity : AppCompatActivity() {
             seniButton?.isSelected = seniButton?.isSelected != true
         }
 
-        val email = intent.getStringExtra("EMAIL2")
+        val email = intent.getStringExtra("EMAIL2")!!
         if (email != null) {
             Log.d("TEST3",email)
         }
+        val name = intent.getStringExtra("NAME2")!!
+        val nickName = intent.getStringExtra("NICKNAME2")!!
+        val firstAccessDate = intent.getStringExtra("FIRSTACCESSDATE2")!!
+        val bodypart = intent.getStringExtra("BODYPART2")!!
+
         val C_button = findViewById<Button>(R.id.signup_level_continueButton)
         val B_button = findViewById<Button>(R.id.signup_level_skipButton)
         C_button.setOnClickListener {
+            var level:String=""
+            ////bodypart 체크박스 id받아오기
+            val basicButton = findViewById<Button>(R.id.signup_level_basic)
+            val interButton = findViewById<Button>(R.id.signup_level_intermediate)
+            val seniButton = findViewById<Button>(R.id.signup_level_senior)
 
-            val intent = Intent(this,StartActivity::class.java)
+            if(basicButton.isSelected){
+                level="Beginner"
+            }else if (interButton.isSelected){
+                level = "Intermediate"
+            }else if (seniButton.isSelected){
+                level = "Advanced"
+            }
+
+            val f_level = hashMapOf(
+                "name" to name,
+                "nickName" to nickName,
+                "email" to email,
+                "firstAccessDate" to firstAccessDate,
+                "accessNum" to 0,
+                "calenderRecordNum" to 0,
+                "youtubeWatchNum" to 0,
+                "bodypart" to bodypart,
+                "level" to level,
+                "shape" to ""
+
+            )
+            firebaseStore.collection("회원정보").document(email).set(f_level)
+
+            val intent = Intent(this,SignUpFormActivity::class.java)
             intent.putExtra("EMAIL3",email)
+            intent.putExtra("NAME3",name)
+            intent.putExtra("NICKNAME3",nickName)
+            intent.putExtra("FIRSTACCESSDATE3",firstAccessDate)
+            intent.putExtra("BODYPART3",bodypart)
+            intent.putExtra("LEVEL3",level)
             startActivity(intent)
         }
         B_button.setOnClickListener {

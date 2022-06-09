@@ -1,9 +1,11 @@
 package Main.listview
 
+import Main.signup.MyApplication
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +15,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.vision_exam.MainActivity
 import com.example.vision_exam.R
 import com.example.vision_exam.kotlin.LivePreviewActivity
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class MyRecyclerView(items: ArrayList<ItemCard>) : RecyclerView.Adapter<MyRecyclerView.MyViewHolder>() {
 
+
+    var firebaseStore = FirebaseFirestore.getInstance() //firebase 연동
+    val fbpath = firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
+    var nowPoseNum = 0
 
     var items = items
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -44,14 +51,25 @@ class MyRecyclerView(items: ArrayList<ItemCard>) : RecyclerView.Adapter<MyRecycl
         val item=arrayOf("8","10","12","15","20","Passive")
         var selecitem:String?=null
         button.setOnClickListener{
-
             val builder = AlertDialog.Builder(holder.itemView?.context)
             builder.setTitle("Set the number of repetitions per set")
                 .setSingleChoiceItems(item,-1){
                         dialog,which-> selecitem=item[which]
-            }
-                .setPositiveButton("Start",DialogInterface.OnClickListener{
+            }.setPositiveButton("Start",DialogInterface.OnClickListener{
                     dialog,id->
+                    //Start 버튼 클릭시, FireStore의 poseActiveNum 숫자 변경
+                    firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString()).get().addOnSuccessListener {
+                        result ->
+                        Log.d("", "${result["poseActiveNum"]} 끝")
+                        var s=result["poseActiveNum"].toString().toInt()
+                        nowPoseNum=s+1
+                        Log.d("", "${nowPoseNum} 끝")
+                    }
+
+                    Log.d("youtube",nowPoseNum.toString())
+                    firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
+                        .update("poseActiveNum",nowPoseNum)
+
                     val intent = Intent(holder.itemView?.context, LivePreviewActivity::class.java)
                     ContextCompat.startActivity(holder.itemView.context,intent,null)
                 }).setNegativeButton("Cancle",DialogInterface.OnClickListener{

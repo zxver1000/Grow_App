@@ -73,7 +73,7 @@
         android:textColor="#0C0C0C"
         android:textSize="18dp" />
     <CheckBox
-        android:id="@+id/bodyPart_eight"
+        android:id="@+id/bodyPart_arm"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:button="@android:color/transparent"

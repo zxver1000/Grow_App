@@ -1,7 +1,6 @@
 package Main
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,19 +16,21 @@ import com.example.vision_exam.YoutubeContent
 
 class youtubeFragment : Fragment() {
 
+    val email = arguments?.getString("EMAIL5").toString()
+
     private val yt_recyclerview: RecyclerView by lazy {
         view?.findViewById(R.id.yt_recyclerview) as RecyclerView
     }
     val exerciseList= arrayListOf<YoutubeContent>(
-        YoutubeContent("beginner:\nfullbody","tzv5N3yikU4"),
-        YoutubeContent("intermediate:\nfullbody","lKwZ2DU4P-A"),
-        YoutubeContent("advanced:\nfullbody","wrLlzn5TjLY"),
-        YoutubeContent("beginner:\nupperbody","54tTYO-vU2E"),
-        YoutubeContent("intermediate:\nupperbody","GZtB7W9Uafk"),
-        YoutubeContent("advanced:\nuppperbody","o-9ZuMtC8MA"),
-        YoutubeContent("beginner:\nlowerbody","qEoa40A_aZY"),
-        YoutubeContent("intermediate:\nlowerbody","pDFuLG0xrsU"),
-        YoutubeContent("advanced:\nlowerbody","js8z5wIZ0wg"),
+        YoutubeContent("beginner:fullbody","tzv5N3yikU4"),
+        YoutubeContent("intermediate:fullbody","lKwZ2DU4P-A"),
+        YoutubeContent("advanced:fullbody","wrLlzn5TjLY"),
+        YoutubeContent("beginner:upperbody","54tTYO-vU2E"),
+        YoutubeContent("intermediate:upperbody","GZtB7W9Uafk"),
+        YoutubeContent("advanced:uppperbody","o-9ZuMtC8MA"),
+        YoutubeContent("beginner:lowerbody","qEoa40A_aZY"),
+        YoutubeContent("intermediate:lowerbody","pDFuLG0xrsU"),
+        YoutubeContent("advanced:lowerbody","js8z5wIZ0wg"),
     )
 
     override fun onCreateView(
@@ -50,8 +51,7 @@ class youtubeFragment : Fragment() {
 
         adapter.itemClickListener=object :MyItemRecyclerViewAdapter.OnItemClickListener{
             override fun OnItemClick(data: YoutubeContent, position: Int) {
-                Toast.makeText(activity,"youtube click",Toast.LENGTH_SHORT).show()
-                Log.v("toast","click listener")
+                Toast.makeText(activity,"클릭 성공.", Toast.LENGTH_SHORT).show();
             }
         }
         yt_recyclerview.adapter=adapter

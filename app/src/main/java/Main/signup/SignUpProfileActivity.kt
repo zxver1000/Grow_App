@@ -16,7 +16,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.core.graphics.scaleMatrix
 import com.example.vision_exam.R
+import com.example.vision_exam.preference.PreferenceUtils
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -53,7 +55,7 @@ class SignUpProfileActivity : AppCompatActivity() {
             val nickName = editNickName.text.toString()
             val email = editEmail.text.toString()
 
-
+            MyApplication.prefs.myEditText = email
             //회원정보 저장 - firebase에 추가
             val user = hashMapOf(
                 "name" to name,
@@ -62,10 +64,26 @@ class SignUpProfileActivity : AppCompatActivity() {
                 "firstAccessDate" to firstAccessDate,
                 "accessNum" to 0,
                 "calenderRecordNum" to 0,
-                "youtubeWatchNum" to 0
+                "youtubeWatchNum" to 0,
+                "bodypart" to "",
+                "level" to "",
+                "shape" to "",
+                "poseActiveNum" to 0,
+                "calenderRecordNum" to 0,
+
             )
             firebaseStore.collection("회원정보").document(email).set(user)
 
+
+            val intent = Intent(this, SignUpBodyPartActivity::class.java)
+            intent.putExtra("EMAIL",email)
+            intent.putExtra("NICKNAME",nickName)
+            intent.putExtra("NAME",name)
+            intent.putExtra("FIRSTACCESSDATE",firstAccessDate)
+            Log.d("TEST",email)
+            firebaseStore.collection("회원정보").document(email).set(user)
+
+            startActivity(intent)
 //            val MypageFragment:mypageFragment = mypageFragment()
 //            val bundle:Bundle = Bundle()
 //            bundle.putString("email", email)
@@ -73,10 +91,6 @@ class SignUpProfileActivity : AppCompatActivity() {
 //
 //            Log.d("TEST",email)
 
-            val intent = Intent(this, SignUpBodyPartActivity::class.java)
-            intent.putExtra("EMAIL",email)
-            Log.d("TEST",email)
-            startActivity(intent)
           }
         }
     }
