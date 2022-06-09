@@ -20,6 +20,7 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
 import com.example.vision_exam.kotlin.posedetector.PoseGraphic
 class resultFragment1 : Fragment() {
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +31,7 @@ class resultFragment1 : Fragment() {
 
 
         val barChart:BarChart=root.findViewById(R.id.barChart)
-
+        val arrays=PoseGraphic.z_array
         val entries = ArrayList<BarEntry>()
         var index=1.2f
         var counting=0f
@@ -41,7 +42,7 @@ class resultFragment1 : Fragment() {
 
         entries.add(BarEntry(index,90.3f))
         index+=1.0f
-        for(z in PoseGraphic.z_array)
+        for(z in arrays)
         {
             entries.add(BarEntry(index,z.toFloat()))
             index+=1.0f
@@ -55,7 +56,7 @@ class resultFragment1 : Fragment() {
 
         }
 
-        PoseGraphic.z_array.clear()
+
      var average_text=root.findViewById<TextView>(R.id.average_accuracy)
         var high_text=root.findViewById<TextView>(R.id.high_accuracy)
         var low_text=root.findViewById<TextView>(R.id.low_accuracy)

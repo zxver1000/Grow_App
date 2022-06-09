@@ -74,6 +74,7 @@ class LivePreviewActivity :
 
     super.onCreate(savedInstanceState)
     Log.d(TAG, "onCreate")
+    PoseGraphic.z_array.clear()
     setContentView(R.layout.activity_vision_live_preview)
     preview = findViewById(R.id.preview_view)
     if (preview == null) {

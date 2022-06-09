@@ -22,6 +22,7 @@ import com.example.vision_exam.kotlin.CameraXLivePreviewActivity
 import com.example.vision_exam.kotlin.CameraXSourceDemoActivity
 import com.example.vision_exam.kotlin.LivePreviewActivity
 import com.example.vision_exam.kotlin.StillImageActivity
+import com.example.vision_exam.kotlin.posedetector.PoseGraphic
 import com.github.mikephil.charting.utils.Utils.init
 import com.squareup.okhttp.internal.Internal.instance
 import org.w3c.dom.Text
@@ -43,6 +44,7 @@ class MainActivity :
 context=this
   }
     override fun onCreate(savedInstanceState: Bundle?) {
+
 
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
