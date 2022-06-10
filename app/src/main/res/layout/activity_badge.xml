@@ -190,7 +190,7 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageButton
+                        <ImageView
                             android:id="@+id/badge_record_first"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -315,8 +315,8 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageButton
-                            android:id="@+id/badge_use_one"
+                        <ImageView
+                            android:id="@+id/badge_youtube_one"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:background="@drawable/badge_circle_shape"
@@ -356,7 +356,7 @@
                         android:orientation="vertical">
 
                         <ImageButton
-                            android:id="@+id/badge_use_five"
+                            android:id="@+id/badge_youtube_three"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:background="@drawable/badge_circle_shape"
@@ -395,8 +395,8 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageButton
-                            android:id="@+id/badge_use_ten"
+                        <ImageView
+                            android:id="@+id/badge_youtube_five"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:background="@drawable/badge_circle_shape"

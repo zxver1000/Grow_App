@@ -3,12 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/activity_badge.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/activity_main.xml" value="0.3578125" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/activity_main2.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/activity_sign_up_form.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/activity_sign_up_level.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/activity_sign_up_profile.xml" value="0.14739583333333334" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/activity_splash.xml" value="0.3578125" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/activity_still_image.xml" value="0.3578125" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/fragment_board.xml" value="0.3578125" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/fragment_mypage.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/fragment_youtube.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/fragment_youtube_item.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/eve65/AndroidStudioProjects/K-LAP-ex-/app/src/main/res/layout/listview_item.xml" value="0.3578125" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable-hdpi/ic_switch_camera_white_48dp.xml" value="0.172" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/badge_circle_shape.xml" value="0.214" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/drawable/custom_checkbox.xml" value="0.269" />

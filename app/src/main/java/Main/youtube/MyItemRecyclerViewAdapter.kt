@@ -12,15 +12,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.core.content.ContextCompat
-import com.example.vision_exam.MyItemRecyclerViewAdapter.ViewHolder
+
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.*
 
 class MyItemRecyclerViewAdapter(
     private val values: ArrayList<YoutubeContent>
-) : RecyclerView.Adapter<ViewHolder>() {
+) : RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder>() {
 
 
     var firebaseStore = FirebaseFirestore.getInstance() //firebase 연동
@@ -48,18 +49,36 @@ class MyItemRecyclerViewAdapter(
         holder.youtube_exercise.setOnClickListener {
             Log.d("youtube","시작")
 
+
+
             fbpath.addSnapshotListener { snapshot, e ->
                 if(snapshot != null) {
                     nowWatchNum = snapshot.data!!["youtubeWatchNum"].toString().toInt()
                 }
             }
             nowWatchNum+=1
-            Log.d("youtube",nowWatchNum.toString())
+
 
             firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
                 .update("youtubeWatchNum",nowWatchNum)
 
             val intent= Intent(holder.itemView?.context, youtubeplayerActivity::class.java)
+
+            if(nowWatchNum==3) {
+                intent.putExtra("isThree",true)
+            }else{
+                intent.putExtra("isThree",false)
+            }
+            if(nowWatchNum==5) {
+                intent.putExtra("isFive",true)
+            }else{
+                intent.putExtra("isFive",false)
+            }
+            if(nowWatchNum==10) {
+                intent.putExtra("isTen",true)
+            }else{
+                intent.putExtra("isTen",false)
+            }
             intent.putExtra("video",item)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             ContextCompat.startActivity(holder.itemView.context, intent,null)

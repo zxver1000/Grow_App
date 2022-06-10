@@ -61,16 +61,11 @@ class MyRecyclerView(items: ArrayList<ItemCard>) : RecyclerView.Adapter<MyRecycl
                     dialog,id->
 
                     //Start 버튼 클릭시, FireStore의 poseActiveNum 숫자 변경
-                    fbpath.addSnapshotListener { snapshot, e ->
-                        if(snapshot != null) {
-                            nowPoseNum = snapshot.data!!["poseActiveNum"].toString().toInt()
-                        }
+                    firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString()).get().addOnSuccessListener {
+                            result ->
+                        var s=result["poseActiveNum"].toString().toInt()
+                        nowPoseNum=s+1
                     }
-                    nowPoseNum+=1
-                    Log.d("youtube",nowPoseNum.toString())
-
-                    firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
-                        .update("poseActiveNum",nowPoseNum)
 
                     val intent = Intent(holder.itemView?.context, LivePreviewActivity::class.java)
                     ContextCompat.startActivity(holder.itemView.context,intent,null)
