@@ -1,4 +1,4 @@
-# HomeTraning App - Grow
+# HomeTraining App - Grow
 
 
 - Stack - Kotlin, Java, ML-kit
