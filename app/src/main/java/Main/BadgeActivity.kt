@@ -25,7 +25,7 @@ class BadgeActivity : AppCompatActivity() {
 
     val firebaseStore = FirebaseFirestore.getInstance()
     val fbpath = firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
-    private var youtubeCount = 0
+
     
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,32 +34,30 @@ class BadgeActivity : AppCompatActivity() {
         initLayout()
         fbpath.addSnapshotListener(EventListener<DocumentSnapshot> {snapshot, e->
             if (snapshot != null) {
-                youtubeCount = snapshot.data!!["youtubeWatchNum"].toString().toInt()
-                Log.d("YOUTUBECOUNT",youtubeCount.toString())
-            }
-            Log.d("YOUTUBECOUNT",youtubeCount.toString())
-        })
-        Log.d("YOUTUBE COUNT",youtubeCount.toString())
-        val youtubeBadgeOne = findViewById<ImageView>(R.id.badge_youtube_one)
-        val youtubeBadgeThree = findViewById<ImageView>(R.id.badge_youtube_three)
-        val youtubeBadgeFive = findViewById<ImageView>(R.id.badge_youtube_five)
+                var youtubeCount = snapshot.data!!["youtubeWatchNum"].toString().toInt()
 
-        if (youtubeCount>=1)
-        {
-            youtubeBadgeOne.setImageResource(R.drawable.badge_youtube_one)
-            Log.d("COUNTTEST","1")
-            if(youtubeCount>=3)
-            {
-                youtubeBadgeThree.setImageResource(R.drawable.badge_youtube_three)
-                Log.d("COUNTTEST","3")
-                if(youtubeCount>=5)
+                val youtubeBadgeOne = findViewById<ImageView>(R.id.badge_youtube_one)
+                val youtubeBadgeThree = findViewById<ImageView>(R.id.badge_youtube_three)
+                val youtubeBadgeFive = findViewById<ImageView>(R.id.badge_youtube_five)
+
+                if (youtubeCount>=1)
                 {
-                    youtubeBadgeFive.setImageResource(R.drawable.badge_youtube_five)
-                    Log.d("COUNTTEST","5")
+                    youtubeBadgeOne.setImageResource(R.drawable.badge_youtube_one)
+                    if(youtubeCount>=3)
+                    {
+                        youtubeBadgeThree.setImageResource(R.drawable.badge_youtube_three)
+                        if(youtubeCount>=5)
+                        {
+                            youtubeBadgeFive.setImageResource(R.drawable.badge_youtube_five)
+                        }
+                    }
+
                 }
             }
 
-        }
+        })
+
+
 
 
     }
