@@ -1,4 +1,4 @@
-# Self-Health App -Grow
+# HomeTraning App - Grow
 
 
 - Stack - Kotlin,Java,MLkit
