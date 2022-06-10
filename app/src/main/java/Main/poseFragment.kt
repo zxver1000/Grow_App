@@ -26,15 +26,7 @@ class poseFragment : Fragment() {
     ): View? {
         val root=inflater.inflate(R.layout.fragment_pose, container, false)
         // Inflate the layout for this fragment
-        val button:Button=root.findViewById(R.id.button3)
-        print("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
-        button?.setOnClickListener{
-            Log.d("TEST","클릭성공")
-            print("!11")
-            val intent = Intent(activity, MainActivity::class.java)
-            startActivity(intent)
-            print("1212")
-        }
+
         recylcerView=root.findViewById(R.id.recylcerView)
    init()
         return root

@@ -64,9 +64,12 @@ class MyItemRecyclerViewAdapter(
             nowWatchNum+=1
 
 
+            /*
             firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
                 .update("youtubeWatchNum",nowWatchNum)
 
+
+             */
             val intent= Intent(holder.itemView?.context, youtubeplayerActivity::class.java)
 
             if(nowWatchNum==3) {
