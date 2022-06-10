@@ -4,7 +4,7 @@
 - Stack - Kotlin,Java,MLkit
 
 
-- Developer - zxver1000,[HyoWon Choi]([HyoWon Choi](https://github.com/wonniiii)), uujiinn,Ji-soo708,
+- Developer - zxver1000,[HyoWon Choi](https://github.com/wonniiii), uujiinn,Ji-soo708,
 
 
 
