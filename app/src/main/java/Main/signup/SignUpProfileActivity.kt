@@ -30,8 +30,10 @@ import java.time.LocalDate
 class SignUpProfileActivity : AppCompatActivity() {
     var firebaseStore = FirebaseFirestore.getInstance() //firebase 연동
 
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_profile)
 
@@ -62,7 +64,7 @@ class SignUpProfileActivity : AppCompatActivity() {
                 "nickName" to nickName,
                 "email" to email,
                 "firstAccessDate" to firstAccessDate,
-                "accessNum" to 0,
+                "poseActiveNum" to 0,
                 "calenderRecordNum" to 0,
                 "youtubeWatchNum" to 0,
                 "bodypart" to "",
@@ -91,6 +93,10 @@ class SignUpProfileActivity : AppCompatActivity() {
 //
 //            Log.d("TEST",email)
 
+            val intent = Intent(this, SignUpBodyPartActivity::class.java)
+            intent.putExtra("EMAIL",email)
+
+            startActivity(intent)
           }
         }
     }

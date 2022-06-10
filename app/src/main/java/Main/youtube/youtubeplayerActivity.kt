@@ -47,6 +47,14 @@ class youtubeplayerActivity : AppCompatActivity() {
 
         youTubePlayerView=findViewById(R.id.yt_view)
         val video=intent.getSerializableExtra("video") as YoutubeContent
+
+        val isOne = intent.getBooleanExtra("isTen",false)
+        val isThree = intent.getBooleanExtra("isThree",false)
+        val isFive = intent.getBooleanExtra("isFive",false)
+
+        if (isThree || isThree || isFive){
+            Toast.makeText(this@youtubeplayerActivity, "새로운 뱃지를 획득하였습니다 ! \n 마이페이지에서 뱃지를 확인해주세요 !", Toast.LENGTH_SHORT).show()
+        }
         val videoId=video.videoId
         lifecycle.addObserver(youTubePlayerView)
 
@@ -67,9 +75,7 @@ class youtubeplayerActivity : AppCompatActivity() {
             }
         }
 
-        if(watchNum==3) {
-            Toast.makeText(this,"새로운 뱃지를 획득하였습니다 ! \n 마이페이지에서 뱃지를 확인해주세요 !",Toast.LENGTH_SHORT).show()
-        }
+
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
