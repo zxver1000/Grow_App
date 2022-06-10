@@ -58,9 +58,12 @@ class MyItemRecyclerViewAdapter(
             nowWatchNum+=1
             Log.d("youtube",nowWatchNum.toString())
 
+            /*
             firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
                 .update("youtubeWatchNum",nowWatchNum)
 
+
+             */
             val intent= Intent(holder.itemView?.context, youtubeplayerActivity::class.java)
             intent.putExtra("video",item)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

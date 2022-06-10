@@ -85,7 +85,7 @@ class youtubeplayerActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        updatetime()
+     //   updatetime()
     }
 
 
