@@ -51,7 +51,6 @@ class youtubeFragment : Fragment() {
 
         adapter.itemClickListener=object :MyItemRecyclerViewAdapter.OnItemClickListener{
             override fun OnItemClick(data: YoutubeContent, position: Int) {
-                Toast.makeText(activity,"클릭 성공.", Toast.LENGTH_SHORT).show();
             }
         }
         yt_recyclerview.adapter=adapter

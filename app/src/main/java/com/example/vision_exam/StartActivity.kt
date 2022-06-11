@@ -1,28 +1,37 @@
 package com.example.vision_exam
 
 import Main.*
+import Main.signup.MyApplication
 import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.icu.util.Calendar
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.FrameLayout
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.vision_exam.kotlin.CameraXLivePreviewActivity
 import com.example.vision_exam.kotlin.CameraXSourceDemoActivity
 import com.example.vision_exam.kotlin.LivePreviewActivity
+import com.example.vision_exam.kotlin.LivePreviewActivity.Companion.REQUIRED_RUNTIME_PERMISSIONS
 import com.example.vision_exam.kotlin.StillImageActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.time.temporal.ChronoUnit
 import java.util.ArrayList
 
 
 class StartActivity : AppCompatActivity() {
 
+    @RequiresApi(Build.VERSION_CODES.O)
+    val today = LocalDate.now().toString()
 
     private val fl: FrameLayout by lazy{
         findViewById(R.id.fl_container)
@@ -31,6 +40,7 @@ class StartActivity : AppCompatActivity() {
         findViewById(R.id.bnv_main)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
@@ -41,22 +51,25 @@ class StartActivity : AppCompatActivity() {
         }
         val name = intent.getStringExtra("NAME4")!!
         val nickName = intent.getStringExtra("NICKNAME4")!!
-        val firstAccessDate = intent.getStringExtra("FIRSTACCESSDATE4")!!
         val bodypart = intent.getStringExtra("BODYPART4")!!
         val level = intent.getStringExtra("LEVEL4")!!
         val shape = intent.getStringExtra("SHAPE4")!!
-        Log.d("","${email} 이거 맞나요2?")
-
+        val firstAccessDay = intent.getStringExtra("FirstAccessDay4")!!
 
         var fragment2=homeFragment()
         var bundle = Bundle()
+
+        if(firstAccessDay.equals(today)) {
+            bundle.putBoolean("isOne",true)
+        }
+
         bundle.putString("email",email)
         bundle.putString("name",name)
         bundle.putString("nickName",nickName)
         bundle.putString("bodypart",bodypart)
         bundle.putString("level",level)
-        bundle.putString("date",firstAccessDate)
         bundle.putString("shape",shape)
+        bundle.putString("firstAccessDay5",firstAccessDay)
         fragment2.arguments=bundle
 
         supportFragmentManager.beginTransaction().add(fl.id,fragment2).commit()
@@ -75,6 +88,7 @@ class StartActivity : AppCompatActivity() {
                     true
                 }
                 R.id.third->{
+
                     supportFragmentManager.beginTransaction().replace(fl.id, boardFragment()).commit()
                     true
 

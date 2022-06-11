@@ -16,8 +16,9 @@ import java.util.*
 class boardFragment : Fragment() {
 
 
+    val calNum= arguments?.getString("CALRECORDNUM").toString()
     val calendarView: CalendarView by lazy {
-        view!!.findViewById(R.id.calendarView)
+        requireView().findViewById(R.id.calendarView)
     }
 
     override fun onCreateView(
@@ -40,6 +41,7 @@ class boardFragment : Fragment() {
             val c = Calendar.getInstance()
             //날짜 클릭
             val intent = Intent(requireActivity(), BoardDetailActivity::class.java)
+            intent.putExtra("nowNum",calNum)
             val calendarInfo = CalendarInfo(year, month+1, dayOfMonth)
             intent.putExtra("info", calendarInfo)
             startActivity(intent)

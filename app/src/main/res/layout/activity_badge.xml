@@ -64,16 +64,15 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageButton
-                            android:id="@+id/badge_attendance_first"
+                        <ImageView
+                            android:id="@+id/badge_posture_first"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:background="@drawable/badge_circle_shape"
                             android:paddingTop="10dp"
-                            android:paddingRight="18dp"
                             android:paddingBottom="12dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/badge_lock" />
+                            android:src="@drawable/badge_attendance_first" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -81,7 +80,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="Attendance \n 3 times"
+                            android:text=" First \n Attendance"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -104,8 +103,8 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageButton
-                            android:id="@+id/badge_attendance_three"
+                        <ImageView
+                            android:id="@+id/badge_posture_five"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:background="@drawable/badge_circle_shape"
@@ -121,7 +120,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Attendance \n 5 times"
+                            android:text="5 times \n Attendance"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -144,8 +143,8 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageButton
-                            android:id="@+id/badge_attendance_five"
+                        <ImageView
+                            android:id="@+id/badge_posture_ten"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:background="@drawable/badge_circle_shape"
@@ -161,7 +160,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Attendance \n 10 times"
+                            android:text="10 times \n Attendance"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -207,7 +206,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="First \n calendar record !"
+                            android:text="First \n calendar record"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -230,7 +229,7 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageButton
+                        <ImageView
                             android:id="@+id/badge_record_ten"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -270,7 +269,7 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageButton
+                        <ImageView
                             android:id="@+id/badge_record_thirty"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -372,7 +371,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Three times \n watch youtube"
+                            android:text="3 times \n watch youtube"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />
@@ -412,7 +411,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:gravity="center"
-                            android:text="Five times \n watch youtube"
+                            android:text="5 times \n watch youtube"
                             android:textColor="@color/black"
                             android:textSize="17dp"
                             android:textStyle="bold" />

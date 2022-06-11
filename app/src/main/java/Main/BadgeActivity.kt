@@ -35,10 +35,20 @@ class BadgeActivity : AppCompatActivity() {
         fbpath.addSnapshotListener(EventListener<DocumentSnapshot> {snapshot, e->
             if (snapshot != null) {
                 var youtubeCount = snapshot.data!!["youtubeWatchNum"].toString().toInt()
+                var poseCount = snapshot.data!!["poseActiveNum"].toString().toInt()
+                var calCount = snapshot.data!!["calenderRecordNum"].toString().toInt()
 
                 val youtubeBadgeOne = findViewById<ImageView>(R.id.badge_youtube_one)
                 val youtubeBadgeThree = findViewById<ImageView>(R.id.badge_youtube_three)
                 val youtubeBadgeFive = findViewById<ImageView>(R.id.badge_youtube_five)
+
+                val poseBadgeOne = findViewById<ImageView>(R.id.badge_posture_first)
+                val poseBadgeFive = findViewById<ImageView>(R.id.badge_posture_five)
+                val poseBadgeTen = findViewById<ImageView>(R.id.badge_posture_ten)
+
+                val calBadgeOne = findViewById<ImageView>(R.id.badge_record_first)
+                val calBadgeThree = findViewById<ImageView>(R.id.badge_record_thirty)
+                val calBadgeTen = findViewById<ImageView>(R.id.badge_record_ten)
 
                 if (youtubeCount>=1)
                 {
@@ -51,7 +61,32 @@ class BadgeActivity : AppCompatActivity() {
                             youtubeBadgeFive.setImageResource(R.drawable.badge_youtube_five)
                         }
                     }
+                }
 
+                if (poseCount>=1)
+                {
+                    poseBadgeOne.setImageResource(R.drawable.badge_user_one)
+                    if(poseCount>=5)
+                    {
+                        poseBadgeFive.setImageResource(R.drawable.badge_use_five)
+                        if(poseCount>=10)
+                        {
+                            poseBadgeTen.setImageResource(R.drawable.badge_use_ten)
+                        }
+                    }
+                }
+
+                if (calCount>=1)
+                {
+                    calBadgeOne.setImageResource(R.drawable.badge_record_first)
+                    if(calCount>=3)
+                    {
+                        calBadgeThree.setImageResource(R.drawable.badge_record_thirty)
+                        if(calCount>=10)
+                        {
+                            calBadgeTen.setImageResource(R.drawable.badge_record_ten)
+                        }
+                    }
                 }
             }
 

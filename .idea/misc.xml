@@ -22,7 +22,9 @@
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_start.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/eve65/AndroidStudioProjects/K-labProject/app/src/main/res/layout/activity_vision_camerax_live_preview.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/eve65/Documents/GitHub/K-LAP/app/src/main/res/layout/activity_badge.xml" value="0.3197463768115942" />
+        <entry key="..\:/Users/eve65/Documents/GitHub/K-LAP/app/src/main/res/layout/activity_sign_up_form.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/eve65/Documents/GitHub/K-LAP/app/src/main/res/layout/fragment_board.xml" value="0.3197463768115942" />
+        <entry key="..\:/Users/eve65/Documents/GitHub/K-LAP/app/src/main/res/layout/fragment_home.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/eve65/Documents/GitHub/K-LAP/app/src/main/res/layout/fragment_pose.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/drawable-hdpi/ic_switch_camera_white_48dp.xml" value="0.1" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/drawable-mdpi/ic_switch_camera_white_48dp.xml" value="0.1" />
@@ -47,15 +49,13 @@
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_badge.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_board.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_camera.xml" value="0.1537037037037037" />
-        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_compare.xml" value="0.33" />
+        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_compare.xml" value="0.13541666666666666" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_first.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_home.xml" value="0.1537037037037037" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_mypage.xml" value="0.13541666666666666" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_pose.xml" value="0.2" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_result1.xml" value="0.33" />
-        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_stopwatch.xml" value="0.171875" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_youtube.xml" value="0.1537037037037037" />
-        <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/fragment_youtube_item.xml" value="0.171875" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/listview_edittext.xml" value="0.16160081053698075" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/listview_item.xml" value="0.25" />
         <entry key="..\:/Users/kkj/AndroidStudioProjects/vision_exam/app/src/main/res/layout/settings_style.xml" value="0.1526268115942029" />

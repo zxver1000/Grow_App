@@ -28,7 +28,7 @@ class SignUpFormActivity : AppCompatActivity() {
         val textData: String = title.text.toString()
         val builder = SpannableStringBuilder(textData)
         val colorSpan = ForegroundColorSpan(Color.parseColor("#6842FF"))
-        builder.setSpan(colorSpan, 22, 36, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        builder.setSpan(colorSpan, 24, 33, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         title.text = builder
 
         val lweightButton = findViewById<Button>(R.id.signup_form_lweight)
@@ -58,9 +58,9 @@ class SignUpFormActivity : AppCompatActivity() {
         }
         val name = intent.getStringExtra("NAME3")!!
         val nickName = intent.getStringExtra("NICKNAME3")!!
-        val firstAccessDate = intent.getStringExtra("FIRSTACCESSDATE3")!!
         val bodypart = intent.getStringExtra("BODYPART3")!!
         val level = intent.getStringExtra("LEVEL3")!!
+        val firstAccessDay= intent.getStringExtra("FirstAccessDay3")!!
 
         val C_button = findViewById<Button>(R.id.signup_form_continueButton)
         val B_button = findViewById<Button>(R.id.signup_form_skipButton)
@@ -81,10 +81,10 @@ class SignUpFormActivity : AppCompatActivity() {
                 "name" to name,
                 "nickName" to nickName,
                 "email" to email,
-                "firstAccessDate" to firstAccessDate,
-                "accessNum" to 0,
+                "firstAccessDay" to firstAccessDay,
                 "calenderRecordNum" to 0,
                 "youtubeWatchNum" to 0,
+                "poseActiveNum" to 0,
                 "bodypart" to bodypart,
                 "level" to level,
                 "shape" to shape
@@ -96,8 +96,8 @@ class SignUpFormActivity : AppCompatActivity() {
             intent.putExtra("EMAIL4",email)
             intent.putExtra("NAME4",name)
             intent.putExtra("NICKNAME4",nickName)
-            intent.putExtra("FIRSTACCESSDATE4",firstAccessDate)
             intent.putExtra("BODYPART4",bodypart)
+            intent.putExtra("FirstAccessDay4",firstAccessDay)
             intent.putExtra("LEVEL4",level)
             intent.putExtra("SHAPE4",shape)
             startActivity(intent)

@@ -2,13 +2,10 @@ package com.example.vision_exam
 
 import Main.signup.MyApplication
 import Main.youtube.youtubeplayerActivity
-import Main.youtubeFragment
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
-import Main.signup.MyApplication
-import Main.youtubeFragment
-import android.content.ContentValues.TAG
+import android.os.Build
+
 
 import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
@@ -17,12 +14,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.example.vision_exam.MyItemRecyclerViewAdapter.ViewHolder
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.*
+import kotlin.properties.Delegates
 
 class MyItemRecyclerViewAdapter(
     private val values: ArrayList<YoutubeContent>
@@ -30,15 +29,16 @@ class MyItemRecyclerViewAdapter(
 
 
     var firebaseStore = FirebaseFirestore.getInstance() //firebase 연동
-    val fbpath = firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
-    var nowWatchNum = 0
+    val fbpath =
+        firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
+    var nowWatchNum =0
 
 
-    interface OnItemClickListener{
+    interface OnItemClickListener {
         fun OnItemClick(data: YoutubeContent, position: Int)
     }
 
-    var itemClickListener:OnItemClickListener?=null
+    var itemClickListener: OnItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val context = parent.context
@@ -48,48 +48,34 @@ class MyItemRecyclerViewAdapter(
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
-        holder.youtube_exercise.text=item.content
+        holder.youtube_exercise.text = item.content
         holder.youtube_exercise.setOnClickListener {
-            Log.d("youtube","시작")
-
-
+            Log.d("youtube", "시작")
 
             fbpath.addSnapshotListener { snapshot, e ->
-                if(snapshot != null) {
-                    nowWatchNum = snapshot.data!!["youtubeWatchNum"].toString().toInt()
+                if (snapshot != null) {
+                      nowWatchNum = snapshot.data!!["youtubeWatchNum"].toString().toInt()
                 }
             }
-            nowWatchNum+=1
+            nowWatchNum += 1
+            firebaseStore.collection("회원정보")
+                .document(MyApplication.prefs.myEditText.toString())
+                .update("youtubeWatchNum", nowWatchNum)
+
+            val intent = Intent(holder.itemView?.context, youtubeplayerActivity::class.java)
 
 
-            /*
-            firebaseStore.collection("회원정보").document(MyApplication.prefs.myEditText.toString())
-                .update("youtubeWatchNum",nowWatchNum)
-
-
-             */
-            val intent= Intent(holder.itemView?.context, youtubeplayerActivity::class.java)
-
-            if(nowWatchNum==3) {
-                intent.putExtra("isThree",true)
-            }else{
-                intent.putExtra("isThree",false)
-            }
-            if(nowWatchNum==5) {
-                intent.putExtra("isFive",true)
-            }else{
-                intent.putExtra("isFive",false)
-            }
-            if(nowWatchNum==10) {
-                intent.putExtra("isTen",true)
-            }else{
-                intent.putExtra("isTen",false)
-            }
-            intent.putExtra("video",item)
+            intent.putExtra("isOne", nowWatchNum == 1)
+            intent.putExtra("isThree", nowWatchNum == 3)
+            intent.putExtra("isFive", nowWatchNum == 5)
+            intent.putExtra("video", item)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            ContextCompat.startActivity(holder.itemView.context, intent,null)
+            ContextCompat.startActivity(holder.itemView.context, intent, null)
+
+
         }
     }
 
@@ -99,7 +85,7 @@ class MyItemRecyclerViewAdapter(
     inner class ViewHolder(view: View) :
         RecyclerView.ViewHolder(view) {
 
-        val youtube_exercise: Button =view.findViewById(R.id.youtube_exercise)
+        val youtube_exercise: Button = view.findViewById(R.id.youtube_exercise)
     }
 
 }

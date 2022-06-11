@@ -73,6 +73,14 @@ class LivePreviewActivity :
 
 
     super.onCreate(savedInstanceState)
+
+    val isOne = intent.getBooleanExtra("isOne",false)
+    val isFive = intent.getBooleanExtra("isFive",false)
+    val isTen = intent.getBooleanExtra("isTen",false)
+
+    if (isOne || isFive || isTen){
+      Toast.makeText(this@LivePreviewActivity, "새로운 뱃지를 획득하였습니다 ! \n 마이페이지에서 뱃지를 확인해주세요 !", Toast.LENGTH_SHORT).show()
+    }
     Log.d(TAG, "onCreate")
     PoseGraphic.z_array.clear()
     setContentView(R.layout.activity_vision_live_preview)

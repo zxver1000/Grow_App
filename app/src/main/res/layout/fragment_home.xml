@@ -88,19 +88,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:id="@+id/member_info_date"
+                android:id="@+id/member_info_accessDay"
                 android:layout_width="80dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:background="@color/gray"
-                android:text="Date of Join"
+                android:text="EMAIL"
                 android:textColor="#000000"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent" />
             <TextView
-                android:id="@+id/date_text"
+                android:id="@+id/accessDay_text"
                 android:layout_width="80dp"
                 android:layout_height="25dp"
                 android:text="text"
@@ -110,6 +110,7 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"/>
         </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -190,7 +191,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="40dp"
-                android:src="@drawable/dumbbell"/>
+                android:src="@drawable/dumbbell2"/>
             <Button
                 android:id="@+id/exercise_rec"
                 android:text="Exercise recommendation"

@@ -16,7 +16,7 @@
         android:bufferType="spannable"
         android:gravity="center"
         android:layout_marginTop="30dp"
-        android:text="3. Please choose your exercise level"
+        android:text="3. Please choose your \n body form"
         android:textColor="#0C0C0C"
         android:textSize="30dp"
         android:textStyle="bold" />

@@ -110,8 +110,8 @@
             android:name=".preference.SettingsActivity"
             android:exported="false" />
 
-
-            android:name="com.example.vision_exam.kotlin.ChooserActivity"
+        <activity
+            android:name=".kotlin.ChooserActivity"
             android:exported="false" />
         <activity
             android:name="com.example.vision_exam.kotlin.LivePreviewActivity"

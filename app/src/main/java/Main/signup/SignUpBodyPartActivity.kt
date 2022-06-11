@@ -41,13 +41,9 @@ class SignUpBodyPartActivity : AppCompatActivity() {
         title.text = builder
 
         val email = intent.getStringExtra("EMAIL")!!
-        if (email != null) {
-            Log.d("TEST2",email)
-        }
-
+        val firstAccessDay = intent.getStringExtra("FirstAccessDay")
         val name = intent.getStringExtra("NAME")!!
         val nickName = intent.getStringExtra("NICKNAME")!!
-        val firstAccessDate = intent.getStringExtra("FIRSTACCESSDATE")!!
 
 
         val C_button = findViewById<Button>(R.id.signup_bodyPart_continueButton)
@@ -85,8 +81,8 @@ class SignUpBodyPartActivity : AppCompatActivity() {
                 "name" to name,
                 "nickName" to nickName,
                 "email" to email,
-                "firstAccessDate" to firstAccessDate,
-                "accessNum" to 0,
+                "firstAccessDay" to firstAccessDay,
+                "poseActiveNum" to 0,
                 "calenderRecordNum" to 0,
                 "youtubeWatchNum" to 0,
                 "bodypart" to bodypart,
@@ -99,8 +95,8 @@ class SignUpBodyPartActivity : AppCompatActivity() {
             intent.putExtra("EMAIL2",email)
             intent.putExtra("NAME2",name)
             intent.putExtra("NICKNAME2",nickName)
-            intent.putExtra("FIRSTACCESSDATE2",firstAccessDate)
             intent.putExtra("BODYPART2",bodypart)
+            intent.putExtra("FirstAccessDay2",firstAccessDay)
             startActivity(intent)
         }
         B_button.setOnClickListener {

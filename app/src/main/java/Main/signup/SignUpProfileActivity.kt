@@ -14,13 +14,8 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.graphics.scaleMatrix
 import com.example.vision_exam.R
-import com.example.vision_exam.preference.PreferenceUtils
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import java.time.LocalDate
 
@@ -48,11 +43,11 @@ class SignUpProfileActivity : AppCompatActivity() {
         val editName = findViewById<EditText>(R.id.signup_profile_name)
         val editNickName= findViewById<EditText>(R.id.signup_profile_nickName)
         val editEmail = findViewById<EditText>(R.id.signup_profile_email)
+        val firstAccessDay = LocalDate.now().toString()
 
 
         val C_button = findViewById<Button>(R.id.signup_profile_continueButton)
         C_button.setOnClickListener {
-            val firstAccessDate : String = LocalDate.now().toString() //사용자 처음 접속 날짜
             val name = editName.text.toString()
             val nickName = editNickName.text.toString()
             val email = editEmail.text.toString()
@@ -63,16 +58,12 @@ class SignUpProfileActivity : AppCompatActivity() {
                 "name" to name,
                 "nickName" to nickName,
                 "email" to email,
-                "firstAccessDate" to firstAccessDate,
-                "poseActiveNum" to 0,
+                "firstAccessDay" to firstAccessDay,
                 "calenderRecordNum" to 0,
                 "youtubeWatchNum" to 0,
                 "bodypart" to "",
                 "level" to "",
-                "shape" to "",
-                "poseActiveNum" to 0,
-                "calenderRecordNum" to 0,
-
+                "shape" to ""
             )
             firebaseStore.collection("회원정보").document(email).set(user)
 
@@ -81,7 +72,7 @@ class SignUpProfileActivity : AppCompatActivity() {
             intent.putExtra("EMAIL",email)
             intent.putExtra("NICKNAME",nickName)
             intent.putExtra("NAME",name)
-            intent.putExtra("FIRSTACCESSDATE",firstAccessDate)
+            intent.putExtra("FirstAccessDay",firstAccessDay)
             Log.d("TEST",email)
             firebaseStore.collection("회원정보").document(email).set(user)
 
@@ -93,10 +84,7 @@ class SignUpProfileActivity : AppCompatActivity() {
 //
 //            Log.d("TEST",email)
 
-            val intent = Intent(this, SignUpBodyPartActivity::class.java)
-            intent.putExtra("EMAIL",email)
 
-            startActivity(intent)
           }
         }
     }

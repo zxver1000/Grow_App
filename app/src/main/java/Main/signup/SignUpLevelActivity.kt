@@ -56,8 +56,8 @@ class SignUpLevelActivity : AppCompatActivity() {
         }
         val name = intent.getStringExtra("NAME2")!!
         val nickName = intent.getStringExtra("NICKNAME2")!!
-        val firstAccessDate = intent.getStringExtra("FIRSTACCESSDATE2")!!
         val bodypart = intent.getStringExtra("BODYPART2")!!
+        val firstAccessDay = intent.getStringExtra("FirstAccessDay2")!!
 
         val C_button = findViewById<Button>(R.id.signup_level_continueButton)
         val B_button = findViewById<Button>(R.id.signup_level_skipButton)
@@ -80,8 +80,8 @@ class SignUpLevelActivity : AppCompatActivity() {
                 "name" to name,
                 "nickName" to nickName,
                 "email" to email,
-                "firstAccessDate" to firstAccessDate,
-                "accessNum" to 0,
+                "firstAccessDay" to firstAccessDay,
+                "poseActiveNum" to 0,
                 "calenderRecordNum" to 0,
                 "youtubeWatchNum" to 0,
                 "bodypart" to bodypart,
@@ -94,8 +94,8 @@ class SignUpLevelActivity : AppCompatActivity() {
             val intent = Intent(this,SignUpFormActivity::class.java)
             intent.putExtra("EMAIL3",email)
             intent.putExtra("NAME3",name)
+            intent.putExtra("FirstAccessDay3",firstAccessDay)
             intent.putExtra("NICKNAME3",nickName)
-            intent.putExtra("FIRSTACCESSDATE3",firstAccessDate)
             intent.putExtra("BODYPART3",bodypart)
             intent.putExtra("LEVEL3",level)
             startActivity(intent)
