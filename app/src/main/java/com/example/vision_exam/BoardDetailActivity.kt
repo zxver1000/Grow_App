@@ -102,7 +102,8 @@ class BoardDetailActivity : AppCompatActivity() {
                     if (calRecordNum == 1 || calRecordNum == 3 || calRecordNum == 10) {
                         Toast.makeText(
                             this@BoardDetailActivity,
-                            "새로운 뱃지를 획득하였습니다 ! \n 마이페이지에서 뱃지를 확인해주세요 !",
+                            "You have acquired a new badge! \n" +
+                                    " Please check the badge on My Page! ",
                             Toast.LENGTH_SHORT
                         ).show()
 

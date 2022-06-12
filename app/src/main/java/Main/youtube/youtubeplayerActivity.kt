@@ -53,7 +53,8 @@ class youtubeplayerActivity : AppCompatActivity() {
         val isFive = intent.getBooleanExtra("isFive",false)
 
         if (isOne || isThree || isFive){
-            Toast.makeText(this@youtubeplayerActivity, "새로운 뱃지를 획득하였습니다 ! \n 마이페이지에서 뱃지를 확인해주세요 !", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@youtubeplayerActivity, "You have acquired a new badge! \n" +
+                    " Please check the badge on My Page! ", Toast.LENGTH_SHORT).show()
         }
         val videoId=video.videoId
         lifecycle.addObserver(youTubePlayerView)

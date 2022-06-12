@@ -35,7 +35,7 @@ class homeFragment : Fragment() {
         val isOne = arguments?.getBoolean("isOne",false)
 
         if (isOne == true){
-            Toast.makeText(activity, "새로운 뱃지를 획득하였습니다 ! \n 마이페이지에서 뱃지를 확인해주세요 !", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "You have acquired a new badge! \n Please check the badge on My Page!", Toast.LENGTH_SHORT).show()
         }
 
         val root = inflater.inflate(R.layout.fragment_home, container, false)
