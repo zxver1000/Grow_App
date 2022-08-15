@@ -20,7 +20,7 @@
 
 <h2>Service</h2>
 
-- Goal : A service that manages home training continuously
+- <h3>Goal : A service that manages home training continuously</h3>
 
 
 
@@ -30,7 +30,7 @@
 <br/>
 2.  Exercise introduction function
 - Workout recommendation
--  Calorie consumption by exercise
+- Calorie consumption by exercise
 <br/>
 
 3.  Youtube video introduction function
@@ -43,4 +43,4 @@
 - Record daily home training progress
 
 <br/>
-5.  Badge func Video viewing time calendar recording
+5. Badge func Video viewing time calendar recording
