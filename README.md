@@ -31,9 +31,13 @@
 - Real time posture feedback
 - Function to express posture accuracy and the number of exercise users in real time using AI
 <br/>
+
+
 2. Exercise introduction function
 - Workout recommendation
 - Calorie consumption by exercise
+
+
 <br/>
 
 3. Youtube video introduction function
