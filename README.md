@@ -19,7 +19,8 @@
 
 
 <h2>Service</h2>
-- Goal: A service that manages home training continuously
+
+- Goal : A service that manages home training continuously
 
 
 
