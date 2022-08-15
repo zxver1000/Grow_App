@@ -23,17 +23,20 @@
 - <h3>Goal : A service that manages home training continuously</h3>
 
 
+<br/><br/><br/>
 
+<h3>Function</h3>
 
-1.  Posture judgment function
+1. Posture judgment function
 - Real time posture feedback
+- Function to express posture accuracy and the number of exercise users in real time using AI
 <br/>
-2.  Exercise introduction function
+2. Exercise introduction function
 - Workout recommendation
 - Calorie consumption by exercise
 <br/>
 
-3.  Youtube video introduction function
+3. Youtube video introduction function
 - Link to Youtube videos according to level
 - Record the time to watch the video on the calendar
 - Recommend an exercise YouTuber that you're interested in
