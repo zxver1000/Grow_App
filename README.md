@@ -23,7 +23,7 @@
 - <h3>Goal : A service that manages home training continuously</h3>
 
 
-<br/><br/><br/>
+<br/><br/>
 
 <h3>Function</h3>
 
@@ -46,8 +46,14 @@
 - Recommend an exercise YouTuber that you're interested in
 
 <br/>
+
+
+
 4. Calendar function
 - Record daily home training progress
+
+
+
 
 <br/>
 5. Badge func Video viewing time calendar recording
