@@ -40,14 +40,14 @@
 <br/>
 
 
-2. Exercise Introduction Function
+2. <h5>Exercise Introduction Function</h5>
 - Workout recommendation
 - Calorie consumption by exercise
 
 
 <br/>
 
-3. Youtube Video Introduction Function
+3. <h5>Youtube Video Introduction Function</h5>
 - Link to Youtube videos according to level
 - Record the time to watch the video on the calendar
 - Recommend an exercise YouTuber that you're interested in
@@ -56,7 +56,7 @@
 
 
 
-4. Calendar Function
+4. <h5>Calendar Function</h5>
 - Record daily home training progress
 
 
@@ -66,4 +66,4 @@
 
 
 
-5. Badge Func Video viewing time calendar Recording
+5. <h5>Badge Func Video viewing time calendar Recording</h5>
