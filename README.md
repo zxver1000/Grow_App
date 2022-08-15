@@ -46,7 +46,7 @@
 - Recommend an exercise YouTuber that you're interested in
 
 <br/>
-4.  Calendar function
+4. Calendar function
 - Record daily home training progress
 
 <br/>
