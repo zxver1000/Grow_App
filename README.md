@@ -30,6 +30,7 @@
 1. Posture judgment function
 - Real time posture feedback
 - Function to express posture accuracy and the number of exercise users in real time using AI
+- At the end of the exercise, the accuracy is expressed as a graph for each repetition.
 <br/>
 
 
