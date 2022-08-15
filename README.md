@@ -27,27 +27,27 @@
 
 
 
-#<h3>Function</h3>
+<h3>Function</h3>
 
 
 
 
 
-1. <h5>Posture judgment function</h5>
+1. <h5>Posture Judgment Function</h5>
 - Real time posture feedback
 - Function to express posture accuracy and the number of exercise users in real time using AI
 - At the end of the exercise, the accuracy is expressed as a graph for each repetition.
 <br/>
 
 
-2. Exercise introduction function
+2. Exercise Introduction Function
 - Workout recommendation
 - Calorie consumption by exercise
 
 
 <br/>
 
-3. Youtube video introduction function
+3. Youtube Video Introduction Function
 - Link to Youtube videos according to level
 - Record the time to watch the video on the calendar
 - Recommend an exercise YouTuber that you're interested in
@@ -56,7 +56,7 @@
 
 
 
-4. Calendar function
+4. Calendar Function
 - Record daily home training progress
 
 
@@ -66,4 +66,4 @@
 
 
 
-5. Badge func Video viewing time calendar recording
+5. Badge Func Video viewing time calendar Recording
