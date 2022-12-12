@@ -68,6 +68,8 @@
 5. <h5>Badge Func Video viewing time calendar Recording</h5>
 
 
+<br/>
+<br/>
 
-
+- Result
 ![Animation](https://user-images.githubusercontent.com/78923992/207072847-64052dca-78ca-432e-b560-b057a50642ad.gif)
